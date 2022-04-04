@@ -1,0 +1,724 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  background-color: white;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+article > * + * {
+  margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.ant-layout {
+  display: flex;
+  flex: auto;
+  flex-direction: column;
+  min-height: 0;
+  background: #000;
+}
+
+.ant-layout-header {
+  padding: 0px 5% !important;
+  margin-bottom: 25px;
+  background: #313233 !important;
+}
+
+.ant-tabs-tab + .ant-tabs-tab {
+  margin: 0 0 0 122px;
+}
+
+.glowBorder {
+  box-shadow: inset 0px 0px 10px 0px black;
+}
+
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+
+/* TIMELINE
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline {
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.timeline ol {
+  font-size: 0;
+  width: auto;
+  padding: 20px 0px 20px 0rem;
+  transition: all 1s;
+}
+
+.timeline ol li {
+  position: relative;
+  display: inline-block;
+  list-style-type: none;
+  width: 17.5% !important;
+  height: 10px;
+}
+
+.timeline ol li:last-child {
+  width: 280px;
+}
+
+.timeline ol li:not(:first-child) {
+  margin-left: 14px;
+}
+
+.timeline ol li:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: calc(100% + -3px);
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #fff;
+}
+
+.timeline ol li div {
+  position: absolute;
+  left: calc(100% + 7px);
+  width: 280px;
+  padding: 15px;
+  font-size: 1rem;
+  white-space: normal;
+  color: black;
+  background: white;
+}
+
+.timeline ol li div::before {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.timeline ol li:nth-child(odd) div {
+  top: -16px;
+  transform: translateY(-100%);
+}
+
+.timeline ol li:nth-child(odd) div::before {
+  top: 100%;
+  border-width: 8px 8px 0 0;
+  border-color: white transparent transparent transparent;
+}
+
+.timeline ol li:nth-child(even) div {
+  top: calc(100% + 16px);
+}
+
+.timeline ol li:nth-child(even) div::before {
+  top: -8px;
+  border-width: 8px 0 0 8px;
+  border-color: transparent transparent transparent white;
+}
+
+.timeline time {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+
+/* TIMELINE ARROWS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timeline .arrows {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.timeline .arrows .arrow__prev {
+  margin-right: 20px;
+}
+
+.timeline .disabled {
+  opacity: .5;
+}
+
+.timeline .arrows img {
+  width: 45px;
+  height: 45px;
+}
+
+.nav-link {
+  padding: 0 !important;
+}
+
+#rc-tabs-0-tab-1 {
+  color: #016bf6;
+}
+#rc-tabs-0-tab-2 {
+  color: #5501f6;
+}
+#rc-tabs-0-tab-3 {
+  color: #f60101;
+}
+#rc-tabs-0-tab-4 {
+  color: #f6cc01;
+}
+#rc-tabs-0-tab-5 {
+  color: #0de884;
+}
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 599px) {
+
+  .ant-layout-header {
+    position: relative;
+    z-index: 1;
+    height: 115px;
+    width: 100%;
+    background: rgb(66, 66, 66);
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+    font-family: Roboto, sans-serif;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.06);
+    padding: 15px 15px;
+    box-shadow: rgb(151 164 175 / 10%) 0px 1px 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.columnHomeHeroText{
+  height: 37vh !important;
+  width: 100% !important;
+}
+
+  .column {
+    width: 100% !important;
+  }
+
+  .timeline ol,
+  .timeline ol li {
+    width: auto; 
+  }
+  
+  .timeline ol {
+    padding: 0;
+    transform: none !important;
+  }
+  
+  .timeline ol li {
+    display: block;
+    height: auto;
+    background: transparent;
+  }
+  
+  .timeline ol li:first-child {
+    margin-top: 25px;
+  }
+  
+  .timeline ol li:not(:first-child) {
+    margin-left: auto;
+  }
+  
+  .timeline ol li div {
+    width: 94%;
+    height: auto !important;
+    margin: 0 auto 25px;
+  }
+  
+  .timeline ol li div {
+    position: static;
+  }
+  
+  .timeline ol li:nth-child(odd) div {
+    transform: none;
+  }
+  
+  .timeline ol li:nth-child(odd) div::before,
+  .timeline ol li:nth-child(even) div::before {
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border: none;
+    border-left: 1px solid white;
+    height: 25px;
+  }
+  
+  .timeline ol li:last-child,
+  .timeline ol li:nth-last-child(2) div::before,
+  .timeline ol li:not(:last-child)::after,
+  .timeline .arrows {
+    display: none;
+  }
+}
+
+/* sub columns in timeline-lg */
+.subColumn-lg-1 {
+padding: 8px;
+text-align: center !important;
+margin: 3px 0 3px 10.3rem !important;
+}
+
+.subColumn-lg-2 {
+padding: 8px;
+text-align: center !important;
+margin: 3px 0 3px 11rem !important;
+}
+
+.subColumn-lg-3 {
+padding: 8px;
+text-align: center !important;
+margin: 3px 0 3px 10.4rem !important;
+}
+
+.subColumn-lg-4 {
+padding: 8px;
+text-align: center !important;
+margin: 3px 0 3px 10.2rem !important;
+}
+
+.subColumn-lg-5 {
+padding: 8px;
+text-align: center !important;
+text-align: end !important;
+margin: 3px 0 3px 8rem !important;
+}
+
+/* sub columns in timeline-lg */
+
+
+/* coloring timeline lines with gradients */
+#clr1 {
+background: linear-gradient(to right, #0de884 , #016bf6de) !important;
+}
+.timeline ol #clr1:not(:last-child)::after {
+background-color: #016bf6 !important;
+}
+.timelinesm ol #clr1:not(:last-child)::after {
+background-color: #016bf6 !important;
+}
+#clr2 {
+background: linear-gradient(to right, #016bf6de, #5501f6) !important;
+}
+.timeline ol #clr2:not(:last-child)::after {
+background-color: #5501f6 !important;
+}
+.timelinesm ol #clr2:not(:last-child)::after {
+background-color: #5501f6 !important;
+}
+#clr3 {
+background: linear-gradient(to right, #5501f6, #f60101) !important;
+}
+.timeline ol #clr3:not(:last-child)::after {
+background-color: #f60101 !important;
+}
+.timelinesm ol #clr3:not(:last-child)::after {
+background-color: #f60101 !important;
+}
+#clr4 {
+background: linear-gradient(to right, #f60101, #f6cc01) !important;
+}
+.timeline ol #clr4:not(:last-child)::after {
+background-color: #f6cc01 !important;
+}
+.timelinesm ol #clr4:not(:last-child)::after {
+background-color: #f6cc01 !important;
+}
+#clr5 {
+background: linear-gradient(to right, #f6cc01, #0de884) !important;
+}
+.timeline ol #clr5:not(:last-child)::after {
+background-color: #0de884 !important;
+}
+/* end coloring timeline lines with gradients*/
+
+/* TIMELINE Small
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+time.subColumn, time.subColumn-lg-1, time.subColumn-lg-2, time.subColumn-lg-3, time.subColumn-lg-4, time.subColumn-lg-5 {
+  width: 5%;
+  color: white;
+}
+
+.timelinesm {
+white-space: nowrap;
+overflow-x: hidden;
+}
+
+.timelinesm ol {
+font-size: 0;
+width: 58vw;
+padding: 0px 0px 10px 0rem;
+transition: all 1s;
+height: 11rem;
+overflow-y: hidden;
+overflow-x: hidden;
+}
+
+.timelinesm ol li {
+position: relative;
+display: inline-block;
+list-style-type: none;
+width: 6.5rem;
+height: 6px;
+background: #fff;
+}
+
+.timelinesm ol li:last-child {
+width: 280px;
+}
+
+.timelinesm ol li:not(:first-child) {
+margin-left: 14px;
+}
+
+.timelinesm ol li:not(:last-child)::after {
+content: '';
+position: absolute;
+top: 50%;
+left: calc(100% + -3px);
+bottom: 0;
+width: 20px;
+height: 20px;
+z-index: 1;
+transform: translateY(-50%);
+border-radius: 50%;
+background: #fff;
+}
+
+.timelinesm ol li div {
+position: absolute;
+left: calc(100% + 7px);
+width: 280px;
+padding: 15px;
+font-size: 1rem;
+white-space: normal;
+color: black;
+background: white;
+}
+
+.timelinesm ol li div::before {
+content: '';
+position: absolute;
+top: 100%;
+left: 0;
+width: 0;
+height: 0;
+border-style: solid;
+}
+
+.timelinesm ol li:nth-child(odd) div {
+top: -16px;
+transform: translateY(-100%);
+}
+
+.timelinesm ol li:nth-child(odd) div::before {
+top: 100%;
+border-width: 8px 8px 0 0;
+border-color: white transparent transparent transparent;
+}
+
+.timelinesm ol li:nth-child(even) div {
+top: calc(100% + 16px);
+}
+
+.timelinesm ol li:nth-child(even) div::before {
+top: -8px;
+border-width: 8px 0 0 8px;
+border-color: transparent transparent transparent white;
+}
+
+.timelinesm time {
+display: block;
+font-size: 1.2rem;
+font-weight: bold;
+margin-bottom: 8px;
+}
+
+
+/* TIMELINE ARROWS
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.timelinesm .arrows {
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+.timelinesm .arrows .arrow__prev {
+margin-right: 20px;
+}
+
+.timelinesm .disabled {
+opacity: .5;
+}
+
+.timelinesm .arrows img {
+width: 45px;
+height: 45px;
+}
+
+
+/* GENERAL MEDIA QUERIES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 599px) {
+.timelinesm ol,
+.timelinesm ol li {
+  width: auto; 
+}
+
+.timelinesm ol {
+  padding: 0;
+  transform: none !important;
+}
+
+.timelinesm ol li {
+  display: block;
+  height: auto;
+  background: transparent;
+}
+
+.timelinesm ol li:first-child {
+  margin-top: 25px;
+}
+
+.timelinesm ol li:not(:first-child) {
+  margin-left: auto;
+}
+
+.timelinesm ol li div {
+  width: 94%;
+  height: auto !important;
+  margin: 0 auto 25px;
+}
+
+.timelinesm ol li div {
+  position: static;
+}
+
+.timelinesm ol li:nth-child(odd) div {
+  transform: none;
+}
+
+.timelinesm ol li:nth-child(odd) div::before,
+.timelinesm ol li:nth-child(even) div::before {
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  border: none;
+  border-left: 1px solid white;
+  height: 25px;
+}
+
+.timelinesm ol li:last-child,
+.timelinesm ol li:nth-last-child(2) div::before,
+.timelinesm ol li:not(:last-child)::after,
+.timelinesm .arrows {
+  display: none;
+}
+}
+
+/* sub columns in timeline-lg */
+.subColumn-sm-1 {
+padding: 8px;
+text-align: center !important;
+margin: 3px 0 3px 5.3rem !important;
+}
+
+.subColumn-sm-1-down {
+padding: 8px;
+text-align: center !important;
+margin: 3px 0 3px 6rem !important;
+}
+
+.subColumn-sm-2 {
+padding: 8px;
+text-align: center !important;
+margin: 3px 0 3px 3.5rem !important;
+}
+
+.subColumn-sm-2-down {
+padding: 8px;
+text-align: center !important;
+margin: 3px 0 3px 4rem !important;
+}
+
+.subColumn-sm-3 {
+padding: 8px;
+text-align: center !important;
+margin: 3px 0 3px 3rem !important;
+}
+
+.subColumn-sm-3-down {
+padding: 8px;
+text-align: center !important;
+margin: 3px 0 3px 4rem !important;
+}
+
+.subColumn-sm-4 {
+padding: 8px;
+text-align: center !important;
+margin: 3px 0 3px 3rem !important;
+}
+
+.subColumn-sm-4-down {
+padding: 8px;
+text-align: center !important;
+margin: 3px 0 3px 4rem !important;
+}
+
+.subColumn-sm-5 {
+padding: 8px;
+text-align: center !important;
+text-align: end !important;
+margin: 3px 0 3px 6rem !important;
+}
+
+/* sub columns in timeline-sm */
+
+/* --------timeline-sm-ends--------------- */
+
+.reader {
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  top: 107.5%;
+  left: 6%;
+  z-index: 1;
+  background-color: #2c2c2c;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.tier0 {
+  position: absolute;
+  color: #fff;
+  top: 40%;
+  text-align: center;
+  left: 10%;
+  z-index: 1;
+}
+
+.tier1 {
+  position: absolute;
+  color: #fff;
+  top: 40%;
+  text-align: center;
+  left: 21%;
+  z-index: 1;
+}
+
+.tier2 {
+  position: absolute;
+  color: #fff;
+  top: 40%;
+  text-align: center;
+  left: 32%;
+  z-index: 1;
+}
+
+.tier3 {
+  position: absolute;
+  color: #fff;
+  top: 40%;
+  text-align: center;
+  left: 44%;
+  z-index: 1;
+}
+
+.tier4 {
+  position: absolute;
+  color: #fff;
+  top: 40%;
+  text-align: center;
+  left: 55%;
+  z-index: 1;
+}
+
+.tier5 {
+  position: absolute;
+  color: #fff;
+  top: 40%;
+  text-align: center;
+  left: 67%;
+  z-index: 1;
+}
+
+.centered {
+  text-align: center;
+  font-size: 14px;
+  padding-top: -2px;
+}
+
+.harvest {
+  padding: .5rem 15rem .5rem 15rem;
+}
