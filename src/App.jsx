@@ -121,7 +121,7 @@ const App = ({ isServerInfo }) => {
             background: "transparent"
           }}
           onClick={() => {
-            window.location = 'http://localhost:3000/earn';
+            window.location = 'https://steady-begonia-40a16f.netlify.app/home';
           }}
         >
           Earn
@@ -140,7 +140,7 @@ const App = ({ isServerInfo }) => {
             background: "transparent"
           }}
           onClick={() => {
-            window.location = 'http://localhost:3000/about';
+            window.location = 'https://steady-begonia-40a16f.netlify.app/home';
           }}
         >
           About
