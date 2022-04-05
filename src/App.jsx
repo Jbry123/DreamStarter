@@ -153,7 +153,7 @@ const App = ({ isServerInfo }) => {
             <Route path="/main">
               <Main/>
             </Route>
-            <Route path="/home">
+            <Route path="/">
               <Home/>
             </Route>
             <Route path="/nonauthenticated">
