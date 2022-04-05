@@ -1,7 +1,9 @@
 import SaMHeroImage from "./img/heroImage.jpg";
+import PolygonImage from "./img/Primary_badge2.png";
 // import { useNFTBalance } from "react-moralis";
 import { Tabs } from 'antd';
 import React from "react";
+import DMRBalance from "./DMRBalance";
 import NFTBalances from "./NFTBalances";
 import NFTBalances2 from "./NFTBalances2";
 
@@ -74,7 +76,7 @@ const Home = () => {
             <div className="timeline" style={{background: "#181818", margin: "2.5% 0%", borderRadius: "15px", padding: "1%"}}>
                 <h2 style={{color: "white", marginTop: "2.5%", marginLeft: "12px"}}> DreamStarter Launchpad</h2>
                 <p style={{color: "#b1b1b1", marginLeft: "12px", width: "300px", marginTop: "2%" }}>Stack more DMR in your account, and you: unlock progressive Voting Governance capabilities,<br /> get access to NFT launches, Tier exclusive releases and perks, free/paid in-demand whitelists, and more. Level up today!</p>
-                <h2 style={{color: "white", marginTop: "5%", marginLeft: "12px", textAlign: "center"}}> Your DMR Balance:</h2>
+                <DMRBalance />
                 <svg width="100%" height="314" viewBox="0 0 1240 314" fill="none" xmlns="http://www.w3.org/2000/svg">
 <rect width="1240" height="314" rx="10" fill=""/>
 <g filter="url(#filter0_d_0_1)">
@@ -138,12 +140,51 @@ const Home = () => {
                     <p style={styles.pText}>
                     A place to find <b><i>whitelists,</i></b> given to our community, in other words, we find and collaborate with top projects to give you a deal, and offer defi products using the DMR token(1000 DMR tokens w/ first purchase)
                     </p>
+
                 </div>
             </div>
         </div>
-        <NFTBalances id="home"></NFTBalances>
-
+        {/* <NFTBalances id="home"></NFTBalances> */}
+        
+        <div style={{
+        marginTop: "100px",
+        borderRadius: "18px",
+        background: "#18181890",
+        height: "29.5vh",
+        position: "relative",
+        width: "100%",
+        bottom: "0"
+        }}>
+            <div style={{
+            display: "flex",
+            justifyContent: "center"
+            }}>
+            
+                <img style={{
+                marginTop: "10px",
+                height: "auto",
+                width: "200px",
+                bottom: "0"
+                }} src="https://dreamstarter.co/wp-content/uploads/2022/02/SaM_space_travel_Text-copy-1536x750.png" />
+            
+            </div>
+            <div style={{
+            display: "flex",
+            justifyContent: "center"
+            }}>
+            
+                <img style={{
+                marginTop: "10px",
+                height: "auto",
+                width: "200px",
+                bottom: "0"
+                }} src={PolygonImage} />
+            
+            </div>
         </div>
+
+
+        </div> //container div LAST
     )
 }
 
