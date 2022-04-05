@@ -64,13 +64,13 @@ select {
   flex: auto;
   flex-direction: column;
   min-height: 0;
-  background: #000;
+  background: #201b58;
 }
 
 .ant-layout-header {
   padding: 0px 5% !important;
   margin-bottom: 25px;
-  background: #313233 !important;
+  background: #181818 !important;
 }
 
 .ant-tabs-tab + .ant-tabs-tab {

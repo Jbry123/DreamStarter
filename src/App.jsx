@@ -8,7 +8,7 @@ import {
 import Account from "components/Account";
 import { Layout, Button} from "antd";
 import "antd/dist/antd.css";
-import DreamStarterlogo from "./components/img/dreamr-logo.png";
+import DreamStarterlogo from "./components/img/Rocket-Dreamstarter.png";
 import "./style.css";
 import Home from "components/Home"
 import Main from "components/Main"

@@ -161,7 +161,7 @@ const NFTBalances = () => {
       <h4><b>{RDBObjectsFromOwner}</b></h4>
       <p>{RDBObjectsFromOwner}</p>
     </div> */}
-                <h2 style={{fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}>RDB STAKING VAULT</h2>
+                <h2 style={{fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}>UPCOMING NFT VAULTS</h2>
 
     <RDBNFTs />
     <div id="test">
