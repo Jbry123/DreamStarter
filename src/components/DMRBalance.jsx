@@ -102,7 +102,7 @@ const DMRBalance = () => {
               
               
               let result = value.filter(token => token.token_address == "0x955ce23f20217a6aa205620b40ede4c9e83d325f");
-              balances = Math.round(result[0].balance / 1000000000000000000)
+              balances = Math.round(result[0].balance / 1000000000000000000).toLocaleString("en-US");
                 // for (let i = 0; i < value.result.length; i++) {
                 //     balances.push(JSON.parse(value.result[i].metadata));
 

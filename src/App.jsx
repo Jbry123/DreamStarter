@@ -121,10 +121,10 @@ const App = ({ isServerInfo }) => {
             background: "transparent"
           }}
           onClick={() => {
-            window.location = '/home';
+            window.location = 'https://dreamr.gitbook.io/welcome-to-dreamr/technology/dreamstarter-nft-launchpad';
           }}
         >
-          Earn
+          Learn
         </Button>
         <Button
           size="large"
@@ -140,10 +140,10 @@ const App = ({ isServerInfo }) => {
             background: "transparent"
           }}
           onClick={() => {
-            window.location = '/home';
+            window.location = 'https://global.bittrex.com/Market/Index?MarketName=USDT-DMR';
           }}
         >
-          About
+          Buy DMR
         </Button>
             <Account />
           </div>

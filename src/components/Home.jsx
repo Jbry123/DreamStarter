@@ -21,6 +21,18 @@ const styles = {
     padding: "0px 30px"
     },
 
+    headerText2: {
+        marginTop: "75px",
+        fontSize: "40px",
+        fontFamily: "Roboto",
+        fontWeight: "500",
+        color: "#f2f2f2",
+        height: "95px",
+        width: "100%",
+        padding: "0px 30px",
+        textAlign: "center"
+        },
+
     tabs: {
         fontSize: "38px",
         fontFamily: "Roboto",
@@ -156,17 +168,111 @@ const Home = () => {
             </div>
         </div>
         {/* <NFTBalances id="home"></NFTBalances> */}
+        <h1 style={styles.headerText2}>DREAMCATCHER NFT VAULTS</h1>
+        <div className="cardContainer" style={{display: "flex",flexWrap: "wrap", justifyContent: "center"}}>
+            
+
+            <div className="card" style={{borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "250px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s"}}>
+                <img className="cardImage" style={{borderRadius: "5px 25px 5px 20px"}} src={EcosystemImage} alt="Avatar" />
+                <div className="container">
+                    <h4 style={{fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}><b>RDB CAR CLUB</b></h4>
+                    <p  style={{fontSize: "14px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}>P2E racing game in it's development phase, beta for large holders coming.</p>
+                    <div className="buttonContainer" style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+                        
+                        <a className="stakingButton" style={{fontSize: "14px", fontFamily: "Roboto", fontWeight: "400"}}>
+                        <a href="https://dreamr.gitbook.io/welcome-to-dreamr/technology/dreamstarter-nft-launchpad" style={{marginRight: "2%", display: "flex", justifyContent: "center"}}>
+<button style={{marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent"}}>Enter Vault </button>
+</a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div className="card" style={{borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "250px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s"}}>
+                <img className="cardImage" style={{borderRadius: "5px 25px 5px 20px"}} src={EcosystemImage} alt="Avatar" />
+                <div className="container">
+                    <h4 style={{fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}><b>TRIPPY BIRD</b></h4>
+                    <p  style={{fontSize: "14px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}>P2E arcade game in it's development phase, public beta coming.</p>
+
+                    <div className="buttonContainer" style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+                        
+                        <a className="stakingButton" style={{fontSize: "14px", fontFamily: "Roboto", fontWeight: "400"}}>
+                        <a href="https://dreamr.gitbook.io/welcome-to-dreamr/technology/dreamstarter-nft-launchpad" style={{marginRight: "2%", display: "flex", justifyContent: "center"}}>
+<button style={{marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent"}}>Enter Vault </button>
+</a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div className="card" style={{borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "250px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s"}}>
+                <img className="cardImage" style={{borderRadius: "5px 25px 5px 20px"}} src={EcosystemImage} alt="Avatar" />
+                <div className="container">
+                    <h4 style={{fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}><b>MONSTERBUDS</b></h4>
+                    <p  style={{fontSize: "14px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}>P2E marijuana breeding game, buy a monsterbud to get started!</p>
+
+                    <div className="buttonContainer" style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+                        
+                        <a className="stakingButton" style={{fontSize: "14px", fontFamily: "Roboto", fontWeight: "400"}}>
+                        <a href="https://dreamr.gitbook.io/welcome-to-dreamr/technology/dreamstarter-nft-launchpad" style={{marginRight: "2%", display: "flex", justifyContent: "center"}}>
+<button style={{marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent"}}>Enter Vault </button>
+</a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div className="card" style={{borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "250px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s"}}>
+                <img className="cardImage" style={{borderRadius: "5px 25px 5px 20px"}} src={EcosystemImage} alt="Avatar" />
+                <div className="container">
+                    <h4 style={{fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}><b>CULTURE CARDS</b></h4>
+                    <p  style={{fontSize: "14px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}>Your favorite culture icons immortalized on the blockchain, with perks.</p>
+
+                    <div className="buttonContainer" style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
+                        
+                        <a className="stakingButton" style={{fontSize: "14px", fontFamily: "Roboto", fontWeight: "400"}}>
+                        <a href="https://dreamr.gitbook.io/welcome-to-dreamr/technology/dreamstarter-nft-launchpad" style={{marginRight: "2%", display: "flex", justifyContent: "center"}}>
+<button style={{marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent"}}>Enter Vault </button>
+</a>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        
         
         <div style={{
         marginTop: "100px",
         borderRadius: "18px",
         background: "#18181890",
-        height: "29.5vh",
+        height: "auto",
         position: "relative",
         width: "100%",
         bottom: "0"
         }}>
             <div style={{
+            display: "flex",
+            justifyContent: "left",
+            padding: "2%",
+            flexDirection: "column"
+            }}>
+            
+                <h2 style={{
+                color: "white",
+                fontSize: "30px"
+                }}>Are you a dreamr?
+                </h2>
+                
+                <p style={{
+                color: "grey",
+                fontSize: "20px"
+                }}>Download the Dreamr App and Declare your dream today!
+                </p>
+
+            </div>
+            <svg width="95%" height="60" viewBox="0 0 1240 " fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="180" rx="10" fill=""></rect><rect x="7.5%" y="50%" width="90%" height="10" rx="5" fill="url(#paint0_linear_0_1)"></rect></svg>            <div style={{
             display: "flex",
             justifyContent: "center"
             }}>
