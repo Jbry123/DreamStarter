@@ -22,7 +22,7 @@ const DMRBalance = () => {
         const handleClick = () => {
           setbalanceERC20(balances)
             // console.log(RDBObject,'handle');
-            let RDBHTML = `<div className="balanceContainer" style="display: flex; flex-wrap: wrap; justify-content: center;"><h2 style="font-family: Roboto; font-size: 35px; color: white;">`+ balances +`</h2></div>`;
+            let RDBHTML = `<div className="balanceContainer" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;"><h2 style="font-family: Roboto; font-size: 35px; color: white;">`+ balances +` DMR</h2></div>`;
               document.getElementById("dmrBalance").innerHTML = RDBHTML;
               console.log(balances, 'added1');
 
@@ -91,7 +91,12 @@ const DMRBalance = () => {
 
             // `;
         }
+
+        let alreadyRendered = false;
         
+         if (alreadyRendered) {
+          return;
+         }
         GetBalance.then(
             value => {
               
@@ -104,14 +109,48 @@ const DMRBalance = () => {
                 //     console.log(balances, 'added1');
                 //   }
             // fulfillment
+            alreadyRendered = true;
             }, reason => {
                 console.log(reason, 'error reason');
             // rejection
             }).finally( () => {
               setbalanceERC20(balances)
+              alreadyRendered = true;
+              if (balances >= 250000) {
+                document.getElementById('Tier5').setAttribute('stroke','#60AAC8');
+                document.getElementById('Tier5').setAttribute('fill','#181818');
+                document.getElementById('Tier5').setAttribute('filter','drop-shadow(0px 0px 20px #60AAC8)');
+                return;
+                }
+              if (balances >= 100000) {
+                document.getElementById('Tier4').setAttribute('stroke','#D6B660');
+                document.getElementById('Tier4').setAttribute('fill','#181818');
+                document.getElementById('Tier4').setAttribute('filter','drop-shadow(0px 0px 20px #D6B660)');
+                return;
+                }
+
+              
+              if (balances >= 50000) {
+                document.getElementById('Tier3').setAttribute('stroke','#D11032');
+                document.getElementById('Tier3').setAttribute('fill','#181818');
+                document.getElementById('Tier3').setAttribute('filter','drop-shadow(0px 0px 20px #D11032)');
+                return;
+                }
+              
+              if (balances >= 25000) {
+                document.getElementById('Tier2').setAttribute('stroke','#372FD3');
+                document.getElementById('Tier2').setAttribute('fill','#181818');
+                document.getElementById('Tier2').setAttribute('filter','drop-shadow(0px 0px 20px #372FD3)');
+                return;
+                }
+                if (balances >= 1000) {
+              document.getElementById('Tier1').setAttribute('stroke','#46A4DE');
+              document.getElementById('Tier1').setAttribute('fill','#181818');
+              document.getElementById('Tier1').setAttribute('filter','drop-shadow(0px 0px 20px #46A4DE)');
+              return;
+              }
+
               return
-                // console.log(RDBObject,'test1')
-                // return(balances);
                 
             });    
                 return (
@@ -124,7 +163,7 @@ const DMRBalance = () => {
                       <h2 style={{color: "white", marginTop: "2%", marginLeft: "12px", textAlign: "center"}}> Your DMR Balance:</h2>
                     </div>
                     <div id="dmrBalance">
-                    {balances}
+                    <p style={{color: "white", marginTop: "2%", marginLeft: "12px", textAlign: "center", fontSize: "30px", fontFamily: "Roboto"}}>XX,XXX DMR</p>
                     </div>
                   </div>
                 )

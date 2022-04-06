@@ -120,6 +120,12 @@ const NFTBalances = () => {
 
             // `;
         }
+
+        let alreadyRendered = false;
+        
+         if (alreadyRendered) {
+          return;
+         }
         
         GetNFTS.then(
             value => {
@@ -136,6 +142,7 @@ const NFTBalances = () => {
             }).finally( () => {
                 setRDBObject(RDBObjectsFromOwner)
                 console.log(RDBObject,'test1')
+                alreadyRendered = true;
                 return(RDBObjectsFromOwner);
                 
             });    
