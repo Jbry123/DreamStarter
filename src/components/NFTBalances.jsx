@@ -16,7 +16,7 @@ const NFTBalances = () => {
                 const Web3Api = useMoralisWeb3Api()
                 console.log('DOM fully loaded and parsed');
         
-        const options = { chain: "eth", address: "0xF01b4F7153689Ec2f53A48818eDA8f740A6f41B3", token_address: "0x20bcde673cc3e77d843d100ea14e3760f64e1e11" };
+        const options = { chain: "eth", token_address: "0x20bcde673cc3e77d843d100ea14e3760f64e1e11" };
         const GetNFTS = Web3Api.account.getNFTsForContract(options);
         let RDBObjectsFromOwner = [];
         const [RDBObject, setRDBObject] = useState(RDBObjectsFromOwner)
@@ -28,22 +28,17 @@ const NFTBalances = () => {
             for (let i = 0; i < RDBObject.length; i++) {
 
                 RDBHTML += `
-                <div className="card" style="background: rgb(49, 50, 51); font-family: Rubik; padding: .61%; margin: 1.5%; max-width: 250px; box-shadow: 0 4px 8px 10px rgba(105, 196, 166, 0.5); transition: 0.3s; border-radius: 5px;">
+                <div className="card" style="background: rgb(49, 50, 51); font-family: Rubik; padding: .61%; margin: 1.5%; max-width: 250px; border: solid 2px rgb(105, 196, 166); transition: 0.3s; border-radius: 5px;">
                     <img className="cardImage" style="border-radius: 5px 5px 0 0;" src="` +RDBObject[i].image.replace('ipfs://', 'https://ipfs.io/ipfs/')+`" alt="Avatar" style="width:100%">
                     <div className="container">
                         <h4 style="font-size: 20px; font-family: Rubik; font-weight: 400; color: white; padding: 4% 2%; text-align: center;"><b>`+ RDBObject[i].name +`</b></h4>
-                        <div className="buttonContainer" style="display: flex; flex-wrap: wrap;">
-                            <a className="stakingButton" style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-                                <button style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-                                Info
-                                </button>
-                            </a>
-                            <a className="stakingButton" style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-                                <button style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-                                Stake Now
-                                </button>
-                            </a>
-                        </div>
+                        <div className="buttonContainer" style="display: flex; flex-wrap: wrap; justify-content: center;">
+                        
+                        <a className="stakingButton" style="font-size: 14px; font-family: Roboto; font-weight: 400;"}}>
+                          <button style="margin-top: 2%; width: 150px; border-color: rgb(105, 196, 166); border-radius: 0.5rem; font-size: 17px; padding: 5px; font-weight: 400; color: white; background:transparent;"}}>Enter Vault </button>
+
+                        </a>
+                    </div>
                     </div>
                 </div>`
                 if (i == RDBObject.length) {
@@ -152,8 +147,8 @@ const NFTBalances = () => {
               }, 1000);
                 return (
                   <div>
-                    <div>
-                      <button onClick={handleClick}>Get older! </button>
+                    <div style={{display: "flex", justifyContent: "center"}}>
+                      <button style={{marginTop: "2%",width: "250px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black", background: "rgb(105, 196, 166)"}} onClick={handleClick}>Get Your Stakable NFTs! </button>
                     </div>
                   </div>
                 )
@@ -168,7 +163,7 @@ const NFTBalances = () => {
       <h4><b>{RDBObjectsFromOwner}</b></h4>
       <p>{RDBObjectsFromOwner}</p>
     </div> */}
-                <h2 style={{fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}>UPCOMING NFT VAULTS</h2>
+                <h2 style={{fontSize: "32px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}>RDB NFT VAULT</h2>
 
     <RDBNFTs />
     <div id="test">

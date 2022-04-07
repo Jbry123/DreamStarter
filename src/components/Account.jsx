@@ -54,9 +54,7 @@ const TransferWeth = () => {
   return (
     // Use your custom error component to show errors
     <div>
-      <button onClick={() => check()} disabled={isFetching}>
-        Check Rank
-      </button>
+
     </div>
   );
 };

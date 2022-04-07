@@ -15,14 +15,14 @@ const DMRBalance = () => {
             const Balance = () => {
                 const Web3Api = useMoralisWeb3Api()
                 console.log('DOM fully loaded and parsed');
-        const options = { chain: "matic", address: "0xF01b4F7153689Ec2f53A48818eDA8f740A6f41B3", to_block: "26720464" };
+        const options = { chain: "matic", to_block: "26720464" };
         const GetBalance = Web3Api.account.getTokenBalances(options);
         let balances = [];
         const [balanceERC20, setbalanceERC20] = useState(balances)
         const handleClick = () => {
           setbalanceERC20(balances)
             // console.log(RDBObject,'handle');
-            let RDBHTML = `<div className="balanceContainer" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;"><h2 style="font-family: Roboto; font-size: 35px; color: white;">`+ balances +` DMR</h2></div>`;
+            let RDBHTML = `<div className="balanceContainer" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;"><h2 style="font-family: Roboto; font-size: 35px; color: white;">`+ balances.toLocaleString("en-US") +` DMR</h2></div>`;
               document.getElementById("dmrBalance").innerHTML = RDBHTML;
               console.log(balances, 'added1');
 
@@ -102,7 +102,7 @@ const DMRBalance = () => {
               
               
               let result = value.filter(token => token.token_address == "0x955ce23f20217a6aa205620b40ede4c9e83d325f");
-              balances = Math.round(result[0].balance / 1000000000000000000).toLocaleString("en-US");
+              balances = Math.round(result[0].balance / 1000000000000000000);
                 // for (let i = 0; i < value.result.length; i++) {
                 //     balances.push(JSON.parse(value.result[i].metadata));
 
@@ -128,15 +128,12 @@ const DMRBalance = () => {
                 document.getElementById('Tier4').setAttribute('filter','drop-shadow(0px 0px 20px #D6B660)');
                 return;
                 }
-
-              
               if (balances >= 50000) {
                 document.getElementById('Tier3').setAttribute('stroke','#D11032');
                 document.getElementById('Tier3').setAttribute('fill','#181818');
                 document.getElementById('Tier3').setAttribute('filter','drop-shadow(0px 0px 20px #D11032)');
                 return;
                 }
-              
               if (balances >= 25000) {
                 document.getElementById('Tier2').setAttribute('stroke','#372FD3');
                 document.getElementById('Tier2').setAttribute('fill','#181818');

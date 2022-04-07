@@ -1,13 +1,15 @@
 import { useMoralisQuery } from "react-moralis";
-import Categories from "./Categories"
-import Feed from "./Feed"
+// import Categories from "./Categories"
+// import Feed from "./Feed"
+import NFTBalances from "./NFTBalances";
 
 const Main = () => {
     const queryCategories = useMoralisQuery("Categories");
     const fetchedCategories = JSON.parse(JSON.stringify(queryCategories.data, ["categoryId", "category"]));
     return (
         <div className="container">
-            <div style={{
+            <NFTBalances></NFTBalances>
+            {/* <div style={{
                 display: "flex",
                 fontFamily: "Roboto, sans-serif",
                 color: "#041836",
@@ -18,7 +20,7 @@ const Main = () => {
                 }}>
                 <Categories categories={fetchedCategories}/>
                 <Feed/>
-            </div>
+            </div> */}
             
         </div>
     )

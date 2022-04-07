@@ -98,3 +98,6 @@ select {
   padding: 2px 16px;
 }
 
+li a {
+  color: #69c4a6 !important;
+}
