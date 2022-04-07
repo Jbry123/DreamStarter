@@ -34,11 +34,11 @@ document.head.appendChild(jQueryScript);
 //   polygonNFTs.then(console.log( polygonNFTs.owner_of, 'nftTest'));
 // });
 
-  const appId = 'uNzQtUxe7zRstd5glbXyCXET1jR1dqJ341HfVLmH';
-  const serverUrl = 'https://mwqmzszywaph.usemoralis.com:2053/server';
+  const appId = 'Kn9DxG4BFzFfmhSZWYYJqMXKTKnFlKADa0mPFp5s';
+  const serverUrl = 'https://douakgit7wnc.usemoralis.com:2053/server';
 
-  const APP_ID = 'uNzQtUxe7zRstd5glbXyCXET1jR1dqJ341HfVLmH';
-  const SERVER_URL = 'https://mwqmzszywaph.usemoralis.com:2053/server';
+  const APP_ID = 'Kn9DxG4BFzFfmhSZWYYJqMXKTKnFlKADa0mPFp5s';
+  const SERVER_URL = 'https://douakgit7wnc.usemoralis.com:2053/server';
 
   // class Monster extends Moralis.Object {
   //   constructor() {

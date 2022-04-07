@@ -81,6 +81,7 @@ const Home = () => {
                     <h1 style={styles.headerText}>
                     Welcome to DreamStarter! 
                     </h1>
+                    <div id="test234"></div>
                     <p style={styles.pText}>
                     The <i>Decentralized NFT Launchpad</i> for <u>The Dreamr Ecosystem!</u> DreamStarter is your home to get the most out of NFTs. Back exciting projects doxxed by the Dreamr Labs team, stake your NFTs in our Vaults to earn yield, and unlock benefits only possible through DeFi!                     </p>
                 </div>

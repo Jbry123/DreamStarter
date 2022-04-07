@@ -35,7 +35,7 @@ const NFTBalances = () => {
                         <div className="buttonContainer" style="display: flex; flex-wrap: wrap; justify-content: center;">
                         
                         <a className="stakingButton" style="font-size: 14px; font-family: Roboto; font-weight: 400;"}}>
-                          <button style="margin-top: 2%; width: 150px; border-color: rgb(105, 196, 166); border-radius: 0.5rem; font-size: 17px; padding: 5px; font-weight: 400; color: white; background:transparent;"}}>Enter Vault </button>
+                          <button disabled style="margin-top: 2%; width: 150px; border-color: rgb(105, 196, 166); border-radius: 0.5rem; font-size: 17px; padding: 5px; font-weight: 400; color: white; background:#00000020;"}}>*Staking Coming*</button>
 
                         </a>
                     </div>

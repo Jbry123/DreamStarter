@@ -94,7 +94,13 @@ const App = ({ isServerInfo }) => {
 
   const { authenticate, isWeb3Enabled, enableWeb3, isAuthenticated, user, account, logout, isWeb3EnableLoading } =
     useMoralis();
-
+    const mediaQuery = window.matchMedia('(max-width: 768px)')
+    // Check if the media query is true
+    if (mediaQuery.matches) {
+      // Then trigger an alert
+      alert('Mobile coming soon! Please visit Dreamstarter on a laptop or desktop.')
+    }
+    
   useEffect(() => {
     if (isAuthenticated && !isWeb3Enabled && !isWeb3EnableLoading) enableWeb3();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -156,8 +162,8 @@ const App = ({ isServerInfo }) => {
             <Route path="/">
               <Home/>
             </Route>
-            <Route path="/nonauthenticated">
-              <h3>Please login using the "Authenticate" button</h3>
+            <Route path="/mobile">
+              <h3>Mobile coming soon, please use DreamStarter on a Desktop</h3>
             </Route>
           </Switch>
           {/* {isAuthenticated ? <Redirect to="/main" /> : <Redirect to="/nonauthenticated" />} */}
