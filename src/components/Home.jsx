@@ -186,7 +186,7 @@ const Home = () => {
             <div className="cardContainer" style={{ display: "flex", flexWrap: "nowrap", justifyContent: "center" }}>
 
 
-                <div className="card" style={{ borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "25%", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s" }}>
+                <div className="card" style={{ borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "250px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s" }}>
                     <img className="cardImage" style={{ borderRadius: "5px 25px 5px 20px", maxHeight: "150px" }} src={RDB1} alt="Avatar" />
                     <div className="container">
                         <h4 style={{ fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}><b>RDB CAR CLUB</b></h4>
@@ -340,7 +340,7 @@ const Home = () => {
                         }}>
 
                             <img style={{
-                                height: "auto",
+                                height: "112px",
                                 width: "200px",
                                 bottom: "0"
                             }} src="https://dreamstarter.co/wp-content/uploads/2022/02/SaM_space_travel_Text-copy-1536x750.png" />
@@ -349,13 +349,15 @@ const Home = () => {
 
                         <div style={{
                             display: "flex",
-                            justifyContent: "left"
+                            justifyContent: "left",
+                            alignContent: "flex-end",
+                            alignItems: "center"
                         }}>
 
                             <img style={{
-                                marginTop: "10px",
-                                height: "auto",
-                                width: "200px",
+                                marginBottom: "15px",
+                                height: "50px",
+                                width: "auto",
                                 bottom: "0"
                             }} src={PolygonImage} />
 
