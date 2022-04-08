@@ -68,7 +68,7 @@ function Account() {
     return (
       <div
         onClick={
-          () => authenticate()
+          () => authenticate({ provider: "walletconnect" })
         }
       >
         <Button
