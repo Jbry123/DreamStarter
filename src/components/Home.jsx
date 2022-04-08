@@ -88,11 +88,17 @@ const Home = () => {
             </div>
 
             <div className="timeline" style={{background: "#181818", margin: "2.5% 0%", borderRadius: "15px", padding: "1%"}}>
-                <h2 style={{color: "white", marginTop: "2.5%", marginLeft: "12px"}}> DreamStarter Launchpad & DAO</h2>
-                <p style={{color: "#b1b1b1", marginLeft: "12px", width: "50%", marginTop: "2%" }}><b>$DMR</b> is the governance token for the <a href="https://dreamr.app/">Dreamr platform</a> and is the participation and governance token for the DreamStarter DAO. You must hold at least <b>1,000 $DMR</b> in your connected wallet to participate in DreamStarter launches and vaults, with additional benefits for holding more!</p>
-                <DMRBalance />
-                <svg width="100%" height="314" viewBox="0 0 1240 314" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect width="1240" height="250" rx="10" fill=""/>
+                <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%" }}>
+                    <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%", width: "60%" }}>
+                        <h2 style={{color: "white", marginTop: "4.5%", marginLeft: "8%"}}> DreamStarter Launchpad & DAO</h2>
+                        <p style={{color: "#b1b1b1", marginLeft: "8%", width: "80%", marginTop: "2%" }}><b>$DMR</b> is the governance token for the <a href="https://dreamr.app/">Dreamr platform</a> and is the participation and governance token for the DreamStarter DAO. You must hold at least <b>1,000 $DMR</b> in your connected wallet to participate in DreamStarter launches and vaults, with additional benefits for holding more!</p>
+                    </div>
+                    <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "5%", borderRadius: "15px", margin: "0%", width: "40%" }}>
+                        <DMRBalance />                    
+                    </div>
+                </div>
+                <svg width="100%" height="220" viewBox="0 0 1240 310" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="1240" height="220" rx="10" fill=""/>
 
 <rect x="50" y="178" width="1140" height="10" rx="5" fill="url(#paint0_linear_0_1)"/>
 <circle id="Tier1" strokeWidth="8" cx="293" cy="183" r="15" fill="#46A4DE"/>
@@ -173,10 +179,10 @@ const Home = () => {
         </div>
         {/* <NFTBalances id="home"></NFTBalances> */}
         <h1 style={styles.headerText2}>DREAMCATCHER NFT VAULTS</h1>
-        <div className="cardContainer" style={{display: "flex",flexWrap: "wrap", justifyContent: "center"}}>
+        <div className="cardContainer" style={{display: "flex",flexWrap: "nowrap", justifyContent: "center"}}>
             
 
-            <div className="card" style={{borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "250px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s"}}>
+            <div className="card" style={{borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "25%", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s"}}>
                 <img className="cardImage" style={{borderRadius: "5px 25px 5px 20px", maxHeight: "150px"}} src="https://rdbcarclub.com/wp-content/uploads/2021/11/cropped-unnamed-1.jpg" alt="Avatar" />
                 <div className="container">
                     <h4 style={{fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}><b>RDB CAR CLUB</b></h4>
@@ -210,7 +216,7 @@ const Home = () => {
             </div>
 
             <div className="card" style={{borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "250px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s"}}>
-                <img className="cardImage" style={{borderRadius: "5px 25px 5px 20px" , maxHeight: "150px"}} src={monsterBuds} alt="Avatar" />
+                <img className="cardImage" style={{borderRadius: "5px 25px 5px 20px"}} src={monsterBuds} alt="Avatar" />
                 <div className="container">
                     <h4 style={{fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}><b>MONSTERBUDS</b></h4>
                     <p  style={{fontSize: "14px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center"}}>P2E marijuana breeding game, buy a monsterbud to get started!</p>
@@ -358,14 +364,14 @@ const Home = () => {
                 justifyContent: "right",
                 flexDirection: "row",
                 alignItems: "center",
-                width: "45%"
+                width: "50%"
                 }}>
                    
                     <div style={{width: "44%", height: "100%"}}>
                         <div class="footer__title"><h2 style={{
                     color: "white",
                     fontSize: "20px"
-                    }}>Navigation
+                    }}>Ecosystem
                     </h2></div>
                             <ul class="nav" style={{display: "flex", flexDirection: "column"}} role="menu">
                                 <li class="nav-blog-home nav-current" data-test="" role="menuitem">
@@ -396,11 +402,6 @@ const Home = () => {
                                 <li class="nav-dream-machine-tour" data-test="" role="menuitem">
                                     <a href="https://dreammachineusa.org">
                                         <span>Dream Machine Tour</span>
-                                    </a>
-                                </li>
-                                <li class="nav-the-dreamr-lab-the-y" data-test="" role="menuitem">
-                                    <a href="https://dreamuniverse.org/dreamr-lab-sessions/">
-                                        <span>The Dreamr Lab @ The Y</span>
                                     </a>
                                 </li>
                                 <li class="nav-dreamr-discord-chat" data-test="" role="menuitem">
@@ -434,23 +435,13 @@ const Home = () => {
                                     </a>
                                 </li>
                                 <li class="nav-dmr-token" data-test="" role="menuitem">
-                                    <a href="https://dreamuniverse.org/archive/">
-                                        <span>Archive</span>
+                                    <a href="https://twitter.com/DreamStarterDAO">
+                                        <span>Twitter</span>
                                     </a>
                                 </li>
-                                <li class="nav-whitepaper" data-test="" role="menuitem">
-                                    <a href="https://us18.list-manage.com/contact-form?u=caca92c9c35f6a330b6749f35&form_id=3430d58456611886025027baea981842">
-                                        <span>Contact</span>
-                                    </a>
-                                </li>
-                                <li class="nav-dream-machine-tour" data-test="" role="menuitem">
-                                    <a href="https://dreamr.app/privacy">
-                                        <span>Privacy</span>
-                                    </a>
-                                </li>
-                                <li class="nav-the-dreamr-lab-the-y" data-test="" role="menuitem">
-                                    <a href="https://dreamr.app/tos">
-                                        <span>Terms</span>
+                                <li class="nav-dreamr-discord-chat" data-test="" role="menuitem">
+                                    <a href="https://discord.gg/M8wYpSZVQQ">
+                                        <span>Dreamr Discord Chat</span>
                                     </a>
                                 </li>
                                 
