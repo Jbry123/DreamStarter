@@ -153,7 +153,7 @@ const DMRBalance = () => {
                 return (
                   <div>
                     <div style={{display: "flex", justifyContent: "center"}}>
-                      <button style={{marginTop: "2%",width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent"}} onClick={handleClick}>Get balance! </button>
+                      <button style={{marginTop: "2%",width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "500", color: "#181818", background: "rgb(105, 196, 166)"}} onClick={handleClick}>Get balance! </button>
                     </div>
 
                     <div>

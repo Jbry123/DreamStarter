@@ -68,7 +68,7 @@ function Account() {
     return (
       <div
         onClick={
-          () => authenticate({ provider: "walletconnect" })
+          () => authenticate({ provider: "walletconnect", signingMessage:"Signing this message only verifies that you own your wallet to verify $DMR holdings, and does NOT give DreamStarter permissions to sign any transactions on your behalf." })
         }
       >
         <Button
@@ -84,7 +84,7 @@ function Account() {
             backgroundImage: "linear-gradient(to right, #0de893 , #01cef6)",
           }}
           onClick={() => {
-            authenticate()
+            authenticate({provider: "walletconnect", signingMessage:"Signing this message only verifies that you own your wallet to verify $DMR holdings, and does NOT give DreamStarter permissions to sign any transactions on your behalf."})
           }}
         >
           Connect Wallet
