@@ -186,8 +186,8 @@ const Home = () => {
             <div className="cardContainer" style={{ display: "flex", flexWrap: "nowrap", justifyContent: "center" }}>
 
 
-                <div className="card" style={{ borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "250px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s" }}>
-                    <img className="cardImage" style={{ borderRadius: "5px 25px 5px 20px", maxHeight: "150px" }} src={RDB1} alt="Avatar" />
+                <div className="card" style={{display: "flex", justifyContent: "space-evenly", borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "220px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s" }}>
+                    <img className="cardImage" style={{ borderRadius: "5px 25px 5px 20px", height: "150px" }} src={RDB1} alt="Avatar" />
                     <div className="container">
                         <h4 style={{ fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}><b>RDB CAR CLUB</b></h4>
                         <p style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}>P2E racing game in it's development phase, beta for large holders coming.</p>
@@ -202,11 +202,11 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="card" style={{ borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "250px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s" }}>
-                    <img className="cardImage" style={{ borderRadius: "5px 25px 5px 20px", maxHeight: "150px" }} src={Sam1} alt="Avatar" />
+                <div className="card" style={{display: "flex", justifyContent: "space-evenly", borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "220px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s" }}>
+                    <img className="cardImage" style={{ borderRadius: "5px 25px 5px 20px", height: "150px" }} src={Sam1} alt="Avatar" />
                     <div className="container">
                         <h4 style={{ fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}><b>Sun and Moon</b></h4>
-                        <p style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}>Giveaway NFT that unlocks ever growing perks in The Dreamr Ecosystem. 123 NFTs were minted</p>
+                        <p style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}>Giveaway we did for 123 NFTs that unlocks ever growing perks in The Dreamr Ecosystem.</p>
 
                         <div className="buttonContainer" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
 
@@ -219,8 +219,8 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="card" style={{ borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "250px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s" }}>
-                    <img className="cardImage" style={{ borderRadius: "5px 25px 5px 20px" }} src={monsterBuds} alt="Avatar" />
+                <div className="card" style={{display: "flex", justifyContent: "space-evenly", borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "220px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s" }}>
+                    <img className="cardImage" style={{ borderRadius: "5px 25px 5px 20px", height: "150px", width: "200px" }} src={monsterBuds} alt="Avatar" />
                     <div className="container">
                         <h4 style={{ fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}><b>MONSTERBUDS</b></h4>
                         <p style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}>P2E marijuana breeding game, buy a monsterbud to get started!</p>
@@ -236,7 +236,7 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="card" style={{ borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "250px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s" }}>
+                <div className="card" style={{display: "flex", justifyContent: "space-evenly", borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "220px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s" }}>
                     <img className="cardImage" style={{ borderRadius: "5px 25px 5px 20px", maxHeight: "150px" }} src={cultureCards} alt="Avatar" />
                     <div className="container">
                         <h4 style={{ fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}><b>CULTURE CARDS</b></h4>
