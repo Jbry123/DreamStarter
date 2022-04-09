@@ -54,7 +54,8 @@ const styles = {
         color: "#b1b1b1",
         height: "auto",
         width: "100%",
-        padding: "0px 30px"
+        padding: "0px 30px",
+        marginTop: "30px"
     }
 
 
@@ -93,8 +94,8 @@ const Home = () => {
                 <div className="timeline" style={{ background: "#181818", margin: "2.5% 0%", borderRadius: "15px", padding: "1%" }}>
                     <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%" }}>
                         <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%", width: "60%", alignContent: "center" }}>
-                            <h2 style={{ color: "white", marginBottom: "30px", marginLeft: "8%" }}> DreamStarter Launchpad & DAO</h2>
-                            <p style={{ color: "#b1b1b1", marginLeft: "8%", width: "80%", marginTop: "2%" }}><b>$DMR</b> is the governance token for the <a href="https://dreamr.app/">Dreamr platform</a> and is the participation and governance token for the DreamStarter DAO. You must hold at least <b>1,000 $DMR</b> in your connected wallet to participate in DreamStarter launches and vaults, with additional benefits for holding more!</p>
+                            <h2 style={{ color: "white", marginLeft: "30px" }}> DreamStarter Launchpad & DAO</h2>
+                            <p style={styles.pText}><b>$DMR</b> is the governance token for the <a href="https://dreamr.app/">Dreamr platform</a> and is the participation and governance token for the DreamStarter DAO. You must hold at least <b>1,000 $DMR</b> in your connected wallet to participate in DreamStarter launches and vaults, with additional benefits for holding more!</p>
                         </div>
                         <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "5%", borderRadius: "15px", margin: "0%", width: "40%" }}>
                             <DMRBalance />
