@@ -102,6 +102,10 @@ li a {
   color: #69c4a6 !important;
 }
 
+#loginIcon {
+  cursor: pointer;
+}
+
 @media screen and (max-width: 1005px) and (min-width: 760px) {
   h1, h2, h3 {
     font-size: 25px !important;
@@ -117,4 +121,12 @@ li a {
     flex-wrap: wrap !important;
     justify-content: center !important;
   }
+}
+
+p::-webkit-scrollbar {
+  display: none;
+}
+p {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }

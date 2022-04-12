@@ -1,7 +1,7 @@
 import { useMoralisWeb3Api } from "react-moralis";
 import React from "react";
 import { useState } from "react";
-
+import { useMoralis} from "react-moralis";
 
 
 
@@ -13,6 +13,14 @@ const DMRBalance = () => {
             
         
             const Balance = () => {
+              const { authenticate, isAuthenticated, logout } = useMoralis();
+              if (!isAuthenticated) {
+                setTimeout(function () {
+                    if (isAuthenticated) {
+                      return;
+                  }
+                }, 2000)
+              }
                 const Web3Api = useMoralisWeb3Api()
                 console.log('DOM fully loaded and parsed');
         const options = { chain: "matic", to_block: "26720464" };
@@ -20,6 +28,7 @@ const DMRBalance = () => {
         let balances = [];
         const [balanceERC20, setbalanceERC20] = useState(balances)
         const handleClick = () => {
+          console.log(Web3Api.account, "current user")
           setbalanceERC20(balances)
             // console.log(RDBObject,'handle');
             let RDBHTML = `<div className="balanceContainer" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;"><h2 style="font-family: Roboto; font-size: 35px; color: white;">`+ balances.toLocaleString("en-US") +` DMR</h2></div>`;
@@ -120,34 +129,50 @@ const DMRBalance = () => {
                 document.getElementById('Tier5').setAttribute('stroke','#60AAC8');
                 document.getElementById('Tier5').setAttribute('fill','#181818');
                 document.getElementById('Tier5').setAttribute('filter','drop-shadow(0px 0px 20px #60AAC8)');
+                if (isAuthenticated){
+                  document.getElementById('tierHeaderText').innerText = "TIER 5";
+                }
+                
                 return;
                 }
               if (balances >= 100000) {
                 document.getElementById('Tier4').setAttribute('stroke','#D6B660');
                 document.getElementById('Tier4').setAttribute('fill','#181818');
                 document.getElementById('Tier4').setAttribute('filter','drop-shadow(0px 0px 20px #D6B660)');
+                if (isAuthenticated){
+                document.getElementById('tierHeaderText').innerText = "TIER 4";
+                }
                 return;
                 }
               if (balances >= 50000) {
                 document.getElementById('Tier3').setAttribute('stroke','#D11032');
                 document.getElementById('Tier3').setAttribute('fill','#181818');
                 document.getElementById('Tier3').setAttribute('filter','drop-shadow(0px 0px 20px #D11032)');
+                if (isAuthenticated){
+                document.getElementById('tierHeaderText').innerText = "TIER 3";
+                }
                 return;
                 }
               if (balances >= 25000) {
                 document.getElementById('Tier2').setAttribute('stroke','#372FD3');
                 document.getElementById('Tier2').setAttribute('fill','#181818');
                 document.getElementById('Tier2').setAttribute('filter','drop-shadow(0px 0px 20px #372FD3)');
+                if (isAuthenticated){
+                document.getElementById('tierHeaderText').innerText = "TIER 2";
+                }
                 return;
                 }
                 if (balances >= 1000) {
-              document.getElementById('Tier1').setAttribute('stroke','#46A4DE');
-              document.getElementById('Tier1').setAttribute('fill','#181818');
-              document.getElementById('Tier1').setAttribute('filter','drop-shadow(0px 0px 20px #46A4DE)');
+                document.getElementById('Tier1').setAttribute('stroke','#46A4DE');
+                document.getElementById('Tier1').setAttribute('fill','#181818');
+                document.getElementById('Tier1').setAttribute('filter','drop-shadow(0px 0px 20px #46A4DE)');
+                if (isAuthenticated){
+                document.getElementById('tierHeaderText').innerText = "TIER 1";
+                }
               return;
               }
 
-              return
+              return;
                 
             });    
                 return (

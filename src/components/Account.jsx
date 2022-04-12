@@ -7,6 +7,8 @@ import { useState } from "react";
 import Address from "./Address/Address";
 import { SelectOutlined } from "@ant-design/icons";
 import { getExplorer } from "helpers/networks";
+import metamaskIcon from "./img/metamask-icon.webp";
+import WalletConnectIcon from "./img/walletconnect.png";
 const styles = {
   account: {
     height: "42px",
@@ -67,28 +69,21 @@ function Account() {
   if (!isAuthenticated) {
     return (
       <div
-        onClick={
-          () => authenticate({ provider: "walletconnect", signingMessage:"Signing this message only verifies that you own your wallet to verify $DMR holdings, and does NOT give DreamStarter permissions to sign any transactions on your behalf." })
-        }
-      >
-        <Button
-          size="large"
-          type="primary"
-          style={{
-            width: "100%",
-            borderColor: "transparent",
-            borderRadius: "0.5rem",
-            fontSize: "16px",
-            fontWeight: "500",
-            color: "#424242",
-            backgroundImage: "linear-gradient(to right, #0de893 , #01cef6)",
-          }}
-          onClick={() => {
+        // onClick={
+        //   () => authenticate({ signingMessage:"Signing this message only verifies that you own your wallet to verify $DMR holdings, and does NOT give DreamStarter permissions to sign any transactions on your behalf." })
+        // }
+      style={{display: "flex", width: "200px" }}>
+        <h4 style={{display: "flex", alignItems: "center",fontSize: "20px", color: "white", fontFamily: "Roboto", fontWeight: "500", width: "78px", marginLeft: "5px",  marginRight: "5px", textAlign: "center"}}>Login:</h4>
+        
+        <img id="loginIcon" onClick={() => {
+            authenticate({ signingMessage:"Signing this message only verifies that you own your wallet to verify $DMR holdings, and does NOT give DreamStarter permissions to sign any transactions on your behalf."})
+          }} src={metamaskIcon} alt="" style={{width: "52px", background: "#e7821f", padding: "5px", borderRadius: "100%"}}>
+            </img>
+
+        <img id="loginIcon" onClick={() => {
             authenticate({provider: "walletconnect", signingMessage:"Signing this message only verifies that you own your wallet to verify $DMR holdings, and does NOT give DreamStarter permissions to sign any transactions on your behalf."})
-          }}
-        >
-          Connect Wallet
-        </Button>
+          }} src={WalletConnectIcon} alt="" style={{width: "52px", background: "#2180fc", padding: "5px", borderRadius: "100%", margin: "0% 20px 0px 10px"}}>
+            </img>
       </div>
 
 
@@ -100,9 +95,10 @@ function Account() {
     <>
       <div style={styles.account} onClick={() => setIsModalVisible(true)}>
         <p style={{ marginRight: "5px", ...styles.text }}>
-          {getEllipsisTxt(walletAddress, 6)}
+          {getEllipsisTxt(walletAddress, 5)}
         </p>
         <Blockie currentWallet scale={3} />
+        <h4 id="tierHeaderText" style={{fontSize: "13px", fontFamily: "Roboto", fontWeight: "700", width: "48px", marginLeft: "5px"}}>TIER: ?</h4>
       </div>
       <Modal
         visible={isModalVisible}
@@ -153,13 +149,11 @@ function Account() {
           }}
           onClick={() => {
             logout();
-            setIsModalVisible(false);
           }}
         >
           Disconnect Wallet
         </Button>
 
-        <TransferWeth />
       </Modal>
     </>
   );

@@ -5,6 +5,9 @@ import monsterBuds from "./img/monsterBuds.png";
 import cultureCards from "./img/culturecard.png";
 import Sam1 from "./img/SaM_Save_pose_2.png";
 import RDB1 from "./img/RDB_Logo.png";
+import TwitterLogo from "./img/twitterCircle.png";
+import OpenSeaLogo from "./img/OpenseaCircle.png";
+import GlobeLogo from "./img/globe.png";
 // import { useNFTBalance } from "react-moralis";
 import { Tabs } from 'antd';
 import React from "react";
@@ -15,7 +18,7 @@ import NFTBalances2 from "./NFTBalances2";
 const { TabPane } = Tabs;
 const styles = {
     headerText: {
-        margin: "20px 0px;",
+        margin: "30px 0px;",
         fontSize: "40px",
         fontFamily: "Roboto",
         fontWeight: "500",
@@ -50,12 +53,12 @@ const styles = {
     pText: {
 
         fontFamily: "Roboto",
-        fontSize: "17px",
+        fontSize: "15.5px",
         color: "#b1b1b1",
-        height: "auto",
+        height: "160px",
         width: "100%",
         padding: "0px 30px",
-        marginTop: "30px"
+        overflow: "overlay"
     }
 
 
@@ -82,11 +85,11 @@ const Home = () => {
                         width: "38%", height: "52vh", backgroundColor: "#181818", padding: "0%", display: "flex", flexWrap: "wrap", borderRadius: "15px", flexDirection: "column",
                         justifyContent: "center"
                     }}>
-                        <h1 style={styles.headerText}>
+                        <h1 style={{marginTop: "0px", ...styles.headerText}}>
                             Welcome to DreamStarter!
                         </h1>
                         <div id="test234"></div>
-                        <p style={styles.pText}>
+                        <p style={{...styles.pText, marginTop: "15px", fontSize: "17px", height: "200px"}}>
                             The <i>Decentralized NFT Launchpad</i> for <u>The Dreamr Ecosystem!</u> DreamStarter is your home to get the most out of NFTs. Back exciting projects doxxed by the Dreamr Labs team, stake your NFTs in our Vaults to earn yield, and unlock benefits only possible through DeFi!                     </p>
                     </div>
                 </div>
@@ -94,8 +97,8 @@ const Home = () => {
                 <div className="timeline" style={{ background: "#181818", margin: "2.5% 0%", borderRadius: "15px", padding: "1%" }}>
                     <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%" }}>
                         <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%", width: "60%", alignContent: "center" }}>
-                            <h2 style={{ color: "white", marginLeft: "30px" }}> DreamStarter Launchpad & DAO</h2>
-                            <p style={styles.pText}><b>$DMR</b> is the governance token for the <a href="https://dreamr.app/">Dreamr platform</a> and is the participation and governance token for the DreamStarter DAO. You must hold at least <b>1,000 $DMR</b> in your connected wallet to participate in DreamStarter launches and vaults, with additional benefits for holding more!</p>
+                            <h2 style={{ color: "white", marginBottom: "30px", marginLeft: "8%" }}> DreamStarter Launchpad & DAO</h2>
+                            <p style={{ color: "#b1b1b1", marginLeft: "8%", width: "80%", marginTop: "2%", fontSize: "16px" }}><b>$DMR</b> is the governance token for the <a href="https://dreamr.app/">Dreamr platform</a> and is the participation and governance token for the DreamStarter DAO. You must hold at least <b>1,000 $DMR</b> in your connected wallet to participate in DreamStarter launches and vaults, with additional benefits for holding more!</p>
                         </div>
                         <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "5%", borderRadius: "15px", margin: "0%", width: "40%" }}>
                             <DMRBalance />
@@ -155,36 +158,10 @@ const Home = () => {
                         </a>
                     </div>
                 </div>
-                <div className="row glowBorder" style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: ".6%", borderRadius: "15px", border: "solid 2px #69c4a6" }}>
-                    <div className="row" style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%" }}>
-                        <div className="column" style={{ width: "60%", padding: "0%", display: "flex", flexWrap: "wrap" }}>
-                            <img src={EcosystemImage} alt='dreamr' width="100%" height="auto" style={{ borderRadius: "15px" }} />
-                        </div>
-                        <div className="columnHomeHeroText" style={{
-                            width: "38%", height: "52vh", backgroundColor: "#181818", padding: "0%", display: "flex", flexWrap: "wrap", borderRadius: "15px", flexDirection: "column",
-                            justifyContent: "center"
-                        }}>
-                            <h1 style={styles.headerText}>
-                                Dream Universe Partner
-                            </h1>
-                            <p style={styles.pText}>
-                                The Dreamr Ecosystem ("Dreamr") encompasses a Conglomerati of organizations working harmoniously to build innovative products and produce top-quality content around the core premises of; the psychology of goal achievement, unity over separation, and leveraging technology to make practical the pursuit of one's dreams.
-                            </p>
-                            <div style={{ display: "flex", justifyContent: "center", marginTop: "2%" }}>
-                                <a href="https://dreamr.app/" style={{ marginRight: "2%" }}>
-                                    <button style={{ background: "rgb(105, 196, 166)", marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black" }}>Learn More</button>
-                                </a>
-                                <a href="https://dsc.gg/dreamr">
-                                    <button style={{ background: "rgb(105, 196, 166)", marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black" }}>Join Discord</button>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* <NFTBalances id="home"></NFTBalances> */}
-            <h1 style={styles.headerText2}>DREAMCATCHER NFT VAULTS</h1>
-            <div className="cardContainer" style={{ display: "flex", flexWrap: "nowrap", justifyContent: "center" }}>
+                
+            
+<h1 style={styles.headerText2}>DREAMCATCHER NFT VAULTS</h1>
+            <div className="cardContainer" style={{ display: "flex", flexWrap: "nowrap", justifyContent: "center",marginBottom: "75px" }}>
 
 
                 <div className="card" style={{display: "flex", justifyContent: "space-evenly", borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "220px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s" }}>
@@ -200,6 +177,21 @@ const Home = () => {
                                 </a>
                             </a>
                         </div>
+                        <div style={{display: "flex", width: "100%", justifyContent: "center" }}>
+                            
+                            <a href="http://twitter.com/rdbcarclub" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                <img id="loginIcon" src={TwitterLogo} alt="" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                </img>
+                            </a>
+                            <a href="https://rdbcarclub.com/" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                <img id="loginIcon" src={GlobeLogo} alt="" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                </img>
+                            </a>
+                            <a href="https://opensea.io/collection/rdb-official" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                <img id="loginIcon" src={OpenSeaLogo} alt="" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                </img>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -207,7 +199,7 @@ const Home = () => {
                     <img className="cardImage" style={{ borderRadius: "5px 25px 5px 20px", height: "150px" }} src={Sam1} alt="Avatar" />
                     <div className="container">
                         <h4 style={{ fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}><b>Sun and Moon</b></h4>
-                        <p style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}>Giveaway we did for 123 NFTs that unlocks ever growing perks in The Dreamr Ecosystem.</p>
+                        <p style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}>123 NFTs that unlock ever growing perks in The Dreamr Ecosystem.</p>
 
                         <div className="buttonContainer" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
 
@@ -215,6 +207,21 @@ const Home = () => {
                                 <a href="/main" style={{ marginRight: "2%", display: "flex", justifyContent: "center" }}>
                                     <button style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>Enter Vault </button>
                                 </a>
+                            </a>
+                        </div>
+                        <div style={{display: "flex", width: "100%", justifyContent: "center" }}>
+                            
+                            <a href="https://twitter.com/DreamStarterDAO" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                <img id="loginIcon" src={TwitterLogo} alt="" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                </img>
+                            </a>
+                            <a href="/" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                <img id="loginIcon" src={GlobeLogo} alt="" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                </img>
+                            </a>
+                            <a href="https://opensea.io/collection/sun-moon-launch-nft" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                <img id="loginIcon" src={OpenSeaLogo} alt="" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                </img>
                             </a>
                         </div>
                     </div>
@@ -234,6 +241,21 @@ const Home = () => {
                                 </a>
                             </a>
                         </div>
+                        <div style={{display: "flex", width: "100%", justifyContent: "center" }}>
+                            
+                            <a href="https://twitter.com/MonsterBudsNFT" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                <img id="loginIcon" src={TwitterLogo} alt="" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                </img>
+                            </a>
+                            <a href="https://monsterbuds.io/" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                <img id="loginIcon" src={GlobeLogo} alt="" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                </img>
+                            </a>
+                            <a href="https://opensea.io/collection/monsterbuds-genesis" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                <img id="loginIcon" src={OpenSeaLogo} alt="" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                </img>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -251,11 +273,54 @@ const Home = () => {
                                 </a>
                             </a>
                         </div>
+                        <div style={{display: "flex", width: "100%", justifyContent: "center" }}>
+                            
+                            <a href="https://twitter.com/thecultcards?s=21" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                <img id="loginIcon" src={TwitterLogo} alt="" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                </img>
+                            </a>
+                            <a href="https://theculturecards.io/" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                <img id="loginIcon" src={GlobeLogo} alt="" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                </img>
+                            </a>
+                            <a href="https://opensea.io/TCC_AUCTIONS" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                <img id="loginIcon" src={OpenSeaLogo} alt="" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                                </img>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
 
             </div>
+            </div>
+            {/* <NFTBalances id="home"></NFTBalances> */}
+            <div className="row glowBorder" style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: ".6%", borderRadius: "15px", border: "solid 2px #69c4a6" }}>
+                    <div className="row" style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%" }}>
+                        <div className="column" style={{ width: "60%", padding: "0%", display: "flex", flexWrap: "wrap" }}>
+                            <img src={EcosystemImage} alt='dreamr' width="100%" height="auto" style={{ borderRadius: "15px" }} />
+                        </div>
+                        <div className="columnHomeHeroText" style={{
+                            width: "38%", height: "52vh", backgroundColor: "#181818", padding: "0%", display: "flex", flexWrap: "wrap", borderRadius: "15px", flexDirection: "column",
+                            justifyContent: "center"
+                        }}>
+                            <h1 style={{marginTop: "10px",...styles.headerText}}>
+                                Dream Universe Partner
+                            </h1>
+                            <p style={{marginTop: "15px", ...styles.pText}}>
+                                The Dreamr Ecosystem ("Dreamr") encompasses a Conglomerati of organizations working harmoniously to build innovative products and produce top-quality content around the core premises of; the psychology of goal achievement, unity over separation, and leveraging technology to make practical the pursuit of one's dreams.
+                            </p>
+                            <div style={{ display: "flex", justifyContent: "center", marginTop: "2%" }}>
+                                <a href="https://dreamr.app/" style={{ marginRight: "2%" }}>
+                                    <button style={{ background: "rgb(105, 196, 166)", marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black" }}>Learn More</button>
+                                </a>
+                                <a href="https://dsc.gg/dreamr">
+                                    <button style={{ background: "rgb(105, 196, 166)", marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black" }}>Join Discord</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
 
             <div style={{
