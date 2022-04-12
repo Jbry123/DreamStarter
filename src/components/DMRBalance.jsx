@@ -23,7 +23,7 @@ const DMRBalance = () => {
               }
                 const Web3Api = useMoralisWeb3Api()
                 console.log('DOM fully loaded and parsed');
-        const options = { chain: "matic", to_block: "26720464" };
+        const options = { chain: "matic" };
         const GetBalance = Web3Api.account.getTokenBalances(options);
         let balances = [];
         const [balanceERC20, setbalanceERC20] = useState(balances)
