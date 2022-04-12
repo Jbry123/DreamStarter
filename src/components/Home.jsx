@@ -198,7 +198,7 @@ const Home = () => {
                 <div className="card" style={{display: "flex", justifyContent: "space-evenly", borderRadius: "5px 25px 5px 20px", background: "#181818", fontFamily: "Rubik", padding: ".61%", margin: "1.5%", maxWidth: "220px", boxShadow: "0px 0px 10px 10px rgba(0, 0, 0, 0.2)", transition: "0.3s" }}>
                     <img className="cardImage" style={{ borderRadius: "5px 25px 5px 20px", height: "150px" }} src={Sam1} alt="Avatar" />
                     <div className="container">
-                        <h4 style={{ fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}><b>Sun and Moon</b></h4>
+                        <h4 style={{ fontSize: "20px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}><b>SaM LAUNCH NFT</b></h4>
                         <p style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400", color: "white", padding: "4% 2%", textAlign: "center" }}>123 NFTs that unlock ever growing perks in The Dreamr Ecosystem.</p>
 
                         <div className="buttonContainer" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
