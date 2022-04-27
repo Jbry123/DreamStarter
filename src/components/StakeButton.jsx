@@ -371,7 +371,7 @@ const StakeButton = () => {
                             START DATE
                             </p>
                             <p style={{ color: "#323232", fontSize: "17px", textAlign: "center", fontWeight: "500" }}>
-                            04/29/22
+                            04/27/22
                             </p>
                         </div>
 
@@ -380,17 +380,17 @@ const StakeButton = () => {
                             END DATE
                             </p>
                             <p style={{ color: "#323232", fontSize: "17px", textAlign: "center", fontWeight: "500" }}>
-                            05/10/22
+                            06/10/22
                             </p>
                         </div>
                     </div>
                     <div id="vaultTextContainer" style={{display: "flex", flexWrap: "wrap", width: "100%", minWidth: "300px" }}>
                         <div style={{width: "45%", margin: "2.5%"}}>
                             <p style={{ color: "#323232", fontSize: "14px", textAlign: "center", fontWeight: "500" }}>
-                            APY
+                            INTEREST
                             </p>
                             <p style={{ color: "#323232", fontSize: "17px", textAlign: "center", fontWeight: "500" }}>
-                            XX%
+                            1000% +
                             </p>
                         </div>
 
@@ -405,10 +405,10 @@ const StakeButton = () => {
                     </div>
                 </div>
                 <div>
-                <h2 style={{ color: "white", fontSize: "20px", textAlign: "left", minWidth: "300px" }}>
+                <h2 style={{ color: "white", fontSize: "20px", textAlign: "center", minWidth: "300px" }}>
                         SAM LAUNCH NFTS STAKED
                 </h2>
-                <p style={{ color: "#2DECB6", fontSize: "20px", textAlign: "left", minWidth: "300px" }}>
+                <p style={{ color: "#2DECB6", fontSize: "20px", textAlign: "center", minWidth: "300px" }}>
                     000 / 123
                 </p>
                 </div>

@@ -29,7 +29,7 @@ const Main = () => {
             <div className="timeline" style={{ background: "#181818", margin: "2.5% 0%", borderRadius: "10px", padding: "1%", width: "90vw", margin: "3% 5%" }}>
                     <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%" }}>
                         <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%", width: "60%", alignContent: "center" }}>
-                            <h2 style={{ color: "white", marginBottom: "30px", marginLeft: "8%" }}> DreamStarter Launchpad & DAO</h2>
+                            <h2 style={{ color: "white", marginBottom: "30px", marginLeft: "8%", marginTop: "25px" }}> DreamStarter Launchpad & DAO</h2>
                             <p style={{ color: "#b1b1b1", marginLeft: "8%", width: "80%", marginTop: "2%", fontSize: "16px" }}><b>$DMR</b> is the governance token for the <a href="https://dreamr.app/">Dreamr platform</a> and is the participation and governance token for the DreamStarter DAO. You must hold at least <b>1,000 $DMR</b> in your connected wallet to participate in DreamStarter launches and vaults, with additional benefits for holding more!</p>
                         </div>
                         <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "5%", borderRadius: "15px", margin: "0%", width: "40%" }}>
@@ -90,6 +90,207 @@ const Main = () => {
                         </a>
                     </div>
                 </div>
+
+                <div style={{
+                marginTop: "100px",
+                borderRadius: "18px",
+                background: "#18181890",
+                height: "450px",
+                position: "relative",
+                width: "90%",
+                margin: "5%",
+                bottom: "0"
+            }}>
+                <div style={{
+                    display: "flex",
+                    justifyContent: "left",
+                    padding: "2%",
+                    flexDirection: "row"
+                }}>
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "left",
+                        padding: "2%",
+                        paddingBottom: "0",
+                        flexDirection: "column",
+                        width: "45%"
+                    }}>
+                        <h2 style={{
+                            color: "white",
+                            fontSize: "30px"
+                        }}>Are you a dreamr?
+                        </h2>
+
+                        <p style={{
+                            color: "grey",
+                            fontSize: "20px"
+                        }}>Download the Dreamr App and Declare your dream today!
+                        </p>
+                    </div>
+
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "right",
+                        flexDirection: "row",
+                        alignItems: "center",
+                        width: "45%"
+                    }}>
+                        <div className="buttonContainer" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+
+                            <a className="stakingButton" style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400" }}>
+                                <a href="/main" style={{ marginRight: "2%", display: "flex", justifyContent: "center" }}>
+                                    <button style={{ marginTop: "2%", width: "200px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>Download Dreamr </button>
+                                </a>
+                            </a>
+                        </div>
+                        <div className="buttonContainer" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
+
+                            <a className="stakingButton" style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400" }}>
+                                <a href="https://quickswap.exchange/#/swap?inputCurrency=0x955ce23f20217a6aa205620b40ede4c9e83d325f" style={{ marginRight: "2%", display: "flex", justifyContent: "center" }}>
+                                    <button style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>Buy DMR </button>
+                                </a>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <svg width="95%" height="60" viewBox="0 0 1240 " fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="180" rx="10" fill=""></rect><rect x="7.5%" y="50%" width="90%" height="10" rx="5" fill="url(#paint0_linear_0_1)"></rect></svg>
+                <div style={{
+                    display: "flex",
+                    justifyContent: "left",
+                    flexDirection: "row"
+                }}>
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "left",
+                        flexDirection: "column",
+                        paddingLeft: "3%",
+                        width: "49%",
+                        flexDirection: "row",
+                        alignItems: "top"
+                    }}>
+                        <div style={{
+                            display: "flex",
+                            justifyContent: "left"
+                        }}>
+
+                            <img style={{
+                                height: "112px",
+                                width: "200px",
+                                bottom: "0"
+                            }} src="https://dreamstarter.co/wp-content/uploads/2022/02/SaM_space_travel_Text-copy-1536x750.png" />
+
+                        </div>
+
+                        <div style={{
+                            display: "flex",
+                            justifyContent: "left",
+                            alignContent: "flex-end",
+                            alignItems: "center"
+                        }}>
+
+                            {/* <img style={{
+                                marginBottom: "15px",
+                                height: "50px",
+                                width: "auto",
+                                bottom: "0"
+                            }} src={PolygonImage} /> */}
+
+                        </div>
+
+                    </div>
+
+                    <div style={{
+                        display: "flex",
+                        justifyContent: "right",
+                        flexDirection: "row",
+                        alignItems: "center",
+                        width: "50%"
+                    }}>
+
+                        <div style={{ width: "37%", height: "100%" }}>
+                            <div class="footer__title"><h2 style={{
+                                color: "white",
+                                fontSize: "20px"
+                            }}>Ecosystem
+                            </h2></div>
+                            <ul class="nav" style={{ display: "flex", flexDirection: "column" }} role="menu">
+                                <li class="nav-blog-home nav-current" data-test="" role="menuitem">
+                                    <a href="https://dreamuniverse.org/">
+                                        <span>Blog Home</span>
+                                    </a>
+                                </li>
+                                <li class="nav-dreamr-app" data-test="" role="menuitem">
+                                    <a href="https://dreamr.app">
+                                        <span>Dreamr App</span>
+                                    </a>
+                                </li>
+                                <li class="nav-dreamrlabs-org" data-test="" role="menuitem">
+                                    <a href="https://dreamrlabs.org">
+                                        <span>dreamrlabs.org</span>
+                                    </a>
+                                </li>
+                                <li class="nav-dmr-token" data-test="" role="menuitem">
+                                    <a href="https://dreamuniverse.org/introducing-dmr/">
+                                        <span>$DMR Token</span>
+                                    </a>
+                                </li>
+                                <li class="nav-whitepaper" data-test="" role="menuitem">
+                                    <a href="https://dreamuniverse.org/whitepaper/">
+                                        <span>Whitepaper</span>
+                                    </a>
+                                </li>
+                                <li class="nav-dream-machine-tour" data-test="" role="menuitem">
+                                    <a href="https://dreammachineusa.org">
+                                        <span>Dream Machine Tour</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                        <div style={{ width: "44%", height: "100%" }}>
+                            <div class="footer__title"><h2 style={{
+                                color: "white",
+                                fontSize: "20px"
+                            }}>Quick Links
+                            </h2></div>
+                            <ul class="nav" style={{ display: "flex", flexDirection: "column", height: "100%" }} role="menu">
+                                <li class="nav-blog-home nav-current" data-test="" role="menuitem">
+                                    <a href="https://dreamuniverse.org/about/">
+                                        <span>About Dreamr</span>
+                                    </a>
+                                </li>
+                                <li class="nav-dreamr-app" data-test="" role="menuitem">
+                                    <a href="http://onelink.to/sp9q9s">
+                                        <span>Download</span>
+                                    </a>
+                                </li>
+                                <li class="nav-dreamrlabs-org" data-test="" role="menuitem">
+                                    <a href="https://dreammachineusa.org/">
+                                        <span>Donate</span>
+                                    </a>
+                                </li>
+                                <li class="nav-dmr-token" data-test="" role="menuitem">
+                                    <a href="https://twitter.com/DreamStarterDAO">
+                                        <span>Twitter</span>
+                                    </a>
+                                </li>
+                                <li class="nav-dreamr-discord-chat" data-test="" role="menuitem">
+                                    <a href="https://discord.gg/M8wYpSZVQQ">
+                                        <span>Dreamr Discord Chat</span>
+                                    </a>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
     )
