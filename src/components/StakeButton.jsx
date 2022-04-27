@@ -310,19 +310,18 @@ const StakeButton = () => {
 
         function logKey() {
             setTokenIdStaking(document.getElementById('stakingInputField').value);
-            console.log(tokenIdStaking, 'test123123');
             return;
         }
 
         const transfer = useWeb3Transfer({
             type: "erc721",
-            receiver: "0xa1C79ED5400Ad88aae33c00ecAD4219A554DB8C9", //staking contract
+            receiver: "0x24a23c480A54cF55B70243f91E040ddFC41551F6", //staking contract
             contractAddress: "0x5C45512C39958c73bDdcdCC1179C049D0D079b73",//NFT contract
             tokenId: tokenIdStaking,
         });
 
         const sendOptions = {
-            contractAddress: "0xa1C79ED5400Ad88aae33c00ecAD4219A554DB8C9",
+            contractAddress: "0x24a23c480A54cF55B70243f91E040ddFC41551F6",
             functionName: "stake2",
             abi: ABI,
             params: {
