@@ -26,8 +26,6 @@ const Main = () => {
             </div> */}
             <StakeButton></StakeButton> <br />
             </div>
-            <h2 style={{ color: "white", marginBottom: "30px", marginLeft: "8%", textAlign: "center", marginTop: "32px" }}>CLAIMABLE VAULTS</h2>
-            <h2 style={{ color: "white", marginBottom: "20px", marginLeft: "8%", textAlign: "center" }}>*Coming Soon*</h2>
             <div className="timeline" style={{ background: "#181818", margin: "2.5% 0%", borderRadius: "10px", padding: "1%", width: "90vw", margin: "3% 5%" }}>
                     <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%" }}>
                         <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%", width: "60%", alignContent: "center" }}>
@@ -87,7 +85,7 @@ const Main = () => {
                         <a href="https://dreamr.gitbook.io/welcome-to-dreamr/technology/dreamstarter-nft-launchpad" style={{ marginRight: "2%" }}>
                             <button style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>Learn More </button>
                         </a>
-                        <a href="https://global.bittrex.com/Market/Index?MarketName=USDT-DMR">
+                        <a href="https://quickswap.exchange/#/swap?inputCurrency=0x955ce23f20217a6aa205620b40ede4c9e83d325f">
                             <button style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>Buy DMR </button>
                         </a>
                     </div>

@@ -146,7 +146,7 @@ const App = ({ isServerInfo }) => {
             background: "transparent"
           }}
           onClick={() => {
-            window.location = 'https://global.bittrex.com/Market/Index?MarketName=USDT-DMR';
+            window.location = 'https://quickswap.exchange/#/swap?inputCurrency=0x955ce23f20217a6aa205620b40ede4c9e83d325f';
           }}
         >
           Buy DMR

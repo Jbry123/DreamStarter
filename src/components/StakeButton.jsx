@@ -315,13 +315,13 @@ const StakeButton = () => {
 
         const transfer = useWeb3Transfer({
             type: "erc721",
-            receiver: "0x24a23c480A54cF55B70243f91E040ddFC41551F6", //staking contract
+            receiver: "0x7B897D211Ed0be5B34Bb7B6008509b53bE423F8B", //staking contract
             contractAddress: "0x5C45512C39958c73bDdcdCC1179C049D0D079b73",//NFT contract
             tokenId: tokenIdStaking,
         });
 
         const sendOptions = {
-            contractAddress: "0x24a23c480A54cF55B70243f91E040ddFC41551F6",
+            contractAddress: "0x7B897D211Ed0be5B34Bb7B6008509b53bE423F8B",
             functionName: "stake2",
             abi: ABI,
             params: {
