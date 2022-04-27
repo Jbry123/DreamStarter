@@ -45,21 +45,6 @@ const styles = {
 //   );
 // };
 
-const TransferWeth = () => {
-  const { check, isFetching } = useWeb3Transfer({
-    amount: 1,
-    receiver: "0x7Eea8EB4c4F0A34d0e72c935763C6dEA62C93316",
-    type: "erc20",
-    contractAddress: "0x22c383C477Abe3f7e3fcD08198430D5A81B0d7ff",
-  });
-
-  return (
-    // Use your custom error component to show errors
-    <div>
-
-    </div>
-  );
-};
 
 function Account() {
   const { authenticate, isAuthenticated, logout } = useMoralis();
@@ -67,6 +52,9 @@ function Account() {
   const [isModalVisible, setIsModalVisible] = useState(false);
 
   if (!isAuthenticated) {
+    setInterval(function () {
+      
+    }, 2000);
     return (
       <div
         // onClick={

@@ -12,8 +12,6 @@ import GlobeLogo from "./img/globe.png";
 import { Tabs } from 'antd';
 import React from "react";
 import DMRBalance from "./DMRBalance";
-import NFTBalances from "./NFTBalances";
-import NFTBalances2 from "./NFTBalances2";
 
 const { TabPane } = Tabs;
 const styles = {
@@ -95,9 +93,9 @@ const Home = () => {
                 </div>
 
                 <div className="timeline" style={{ background: "#181818", margin: "2.5% 0%", borderRadius: "15px", padding: "1%" }}>
-                    <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%" }}>
+                    <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", marginTop: "24px" }}>
                         <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%", width: "60%", alignContent: "center" }}>
-                            <h2 style={{ color: "white", marginBottom: "30px", marginLeft: "8%" }}> DreamStarter Launchpad & DAO</h2>
+                            <h2 style={{ color: "white", marginLeft: "8%" }}> DreamStarter Launchpad & DAO</h2>
                             <p style={{ color: "#b1b1b1", marginLeft: "8%", width: "80%", marginTop: "2%", fontSize: "16px" }}><b>$DMR</b> is the governance token for the <a href="https://dreamr.app/">Dreamr platform</a> and is the participation and governance token for the DreamStarter DAO. You must hold at least <b>1,000 $DMR</b> in your connected wallet to participate in DreamStarter launches and vaults, with additional benefits for holding more!</p>
                         </div>
                         <div style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "5%", borderRadius: "15px", margin: "0%", width: "40%" }}>
@@ -153,7 +151,7 @@ const Home = () => {
                         <a href="https://dreamr.gitbook.io/welcome-to-dreamr/technology/dreamstarter-nft-launchpad" style={{ marginRight: "2%" }}>
                             <button style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>Learn More </button>
                         </a>
-                        <a href="https://global.bittrex.com/Market/Index?MarketName=USDT-DMR">
+                        <a href="https://quickswap.exchange/#/swap?inputCurrency=0x955ce23f20217a6aa205620b40ede4c9e83d325f">
                             <button style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>Buy DMR </button>
                         </a>
                     </div>
@@ -377,7 +375,7 @@ const Home = () => {
                         <div className="buttonContainer" style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}>
 
                             <a className="stakingButton" style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400" }}>
-                                <a href="/main" style={{ marginRight: "2%", display: "flex", justifyContent: "center" }}>
+                                <a href="https://quickswap.exchange/#/swap?inputCurrency=0x955ce23f20217a6aa205620b40ede4c9e83d325f" style={{ marginRight: "2%", display: "flex", justifyContent: "center" }}>
                                     <button style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>Buy DMR </button>
                                 </a>
                             </a>
@@ -397,7 +395,8 @@ const Home = () => {
                         justifyContent: "left",
                         flexDirection: "column",
                         paddingLeft: "3%",
-                        width: "45%",
+                        width: "49%",
+                        flexDirection: "row",
                         alignItems: "top"
                     }}>
                         <div style={{
@@ -521,7 +520,6 @@ const Home = () => {
                 </div>
 
             </div>
-
 
 
 

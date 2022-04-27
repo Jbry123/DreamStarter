@@ -28,13 +28,10 @@ const DMRBalance = () => {
         let balances = [];
         const [balanceERC20, setbalanceERC20] = useState(balances)
         const handleClick = () => {
-          console.log(Web3Api.account, "current user")
           setbalanceERC20(balances)
             // console.log(RDBObject,'handle');
-            let RDBHTML = `<div className="balanceContainer" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;"><h2 style="font-family: Roboto; font-size: 35px; color: white;">`+ balances.toLocaleString("en-US") +` DMR</h2></div>`;
+            let RDBHTML = `<div className="balanceContainer" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;"><p style="font-family: Roboto; color: white;">`+ balances.toLocaleString("en-US") +` DMR</p></div>`;
               document.getElementById("dmrBalance").innerHTML = RDBHTML;
-              console.log(balances, 'added1');
-
             // document.getElementById("test").innerHTML = 
             // `
             // <div className="cardContainer" style="display: flex; flex-wrap: wrap; justify-content: center;">
@@ -131,6 +128,7 @@ const DMRBalance = () => {
                 document.getElementById('Tier5').setAttribute('filter','drop-shadow(0px 0px 20px #60AAC8)');
                 if (isAuthenticated){
                   document.getElementById('tierHeaderText').innerText = "TIER 5";
+                  document.getElementById('dmrBalanceText').innerText = balances.toLocaleString("en-US") + " DMR";
                 }
                 
                 return;
@@ -141,6 +139,7 @@ const DMRBalance = () => {
                 document.getElementById('Tier4').setAttribute('filter','drop-shadow(0px 0px 20px #D6B660)');
                 if (isAuthenticated){
                 document.getElementById('tierHeaderText').innerText = "TIER 4";
+                document.getElementById('dmrBalanceText').innerText = balances.toLocaleString("en-US") + " DMR";
                 }
                 return;
                 }
@@ -150,6 +149,7 @@ const DMRBalance = () => {
                 document.getElementById('Tier3').setAttribute('filter','drop-shadow(0px 0px 20px #D11032)');
                 if (isAuthenticated){
                 document.getElementById('tierHeaderText').innerText = "TIER 3";
+                document.getElementById('dmrBalanceText').innerText = balances.toLocaleString("en-US") + " DMR";
                 }
                 return;
                 }
@@ -159,6 +159,7 @@ const DMRBalance = () => {
                 document.getElementById('Tier2').setAttribute('filter','drop-shadow(0px 0px 20px #372FD3)');
                 if (isAuthenticated){
                 document.getElementById('tierHeaderText').innerText = "TIER 2";
+                document.getElementById('dmrBalanceText').innerText = balances.toLocaleString("en-US") + " DMR";
                 }
                 return;
                 }
@@ -168,6 +169,7 @@ const DMRBalance = () => {
                 document.getElementById('Tier1').setAttribute('filter','drop-shadow(0px 0px 20px #46A4DE)');
                 if (isAuthenticated){
                 document.getElementById('tierHeaderText').innerText = "TIER 1";
+                document.getElementById('dmrBalanceText').innerText = balances.toLocaleString("en-US") + " DMR";
                 }
               return;
               }
@@ -177,15 +179,15 @@ const DMRBalance = () => {
             });    
                 return (
                   <div>
-                    <div style={{display: "flex", justifyContent: "center"}}>
+                    {/* <div style={{display: "flex", justifyContent: "center"}}>
                       <button style={{marginTop: "2%",width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "500", color: "#181818", background: "rgb(105, 196, 166)"}} onClick={handleClick}>Get balance! </button>
-                    </div>
+                    </div> */}
 
                     <div>
                       <h2 style={{color: "white", marginTop: "2%", marginLeft: "12px", textAlign: "center"}}> Your DMR Balance:</h2>
                     </div>
                     <div id="dmrBalance">
-                    <p style={{color: "white", marginTop: "2%", marginLeft: "12px", textAlign: "center", fontSize: "30px", fontFamily: "Roboto"}}>XX,XXX DMR</p>
+                    <p id="dmrBalanceText" style={{border: "solid 3px #rgb(105, 196, 166)", borderRadius: "5px 25px 5px 20px", color: "white", marginTop: "2%", marginLeft: "12px", textAlign: "center", fontSize: "30px", fontFamily: "Roboto"}}>XX,XXX DMR</p>
                     </div>
                   </div>
                 )

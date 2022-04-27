@@ -24,6 +24,7 @@ blockquote,
 dl,
 dd {
   margin: 0;
+  font-family: Rubik !important;
 }
 
 body {
@@ -104,6 +105,48 @@ li a {
 
 #loginIcon {
   cursor: pointer;
+}
+
+#container2 {
+  padding: 2px 32px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    width: 100%;
+}
+
+#container3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  align-content: center;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 100vw;
+}
+
+#vaultContainerBig{
+  width: 55%;
+  background: #181818;
+}
+
+#vaultContainerSmall{
+  display: flex;
+    width: 35%;
+    height: auto;
+    background: #181818;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+.stakingButton2, .stakingButton2 button {
+  width: 100% !important;
 }
 
 @media screen and (max-width: 1005px) and (min-width: 760px) {
