@@ -315,13 +315,13 @@ const StakeButton = () => {
 
         const transfer = useWeb3Transfer({
             type: "erc721",
-            receiver: "0x7B897D211Ed0be5B34Bb7B6008509b53bE423F8B", //staking contract
+            receiver: "0x193670e378A19BB41aC134eAF7a360Ea70eDaEe5", //staking contract
             contractAddress: "0x5C45512C39958c73bDdcdCC1179C049D0D079b73",//NFT contract
             tokenId: tokenIdStaking,
         });
 
         const sendOptions = {
-            contractAddress: "0x7B897D211Ed0be5B34Bb7B6008509b53bE423F8B",
+            contractAddress: "0x193670e378A19BB41aC134eAF7a360Ea70eDaEe5",//staking contract
             functionName: "stake2",
             abi: ABI,
             params: {
@@ -347,8 +347,9 @@ const StakeButton = () => {
             transfer.tokenId = document.getElementById('stakingInputField').value;
             sendOptions.params._tokenId = document.getElementById('stakingInputField').value;
             console.log(transfer.tokenId, "transferStaking");
-            transfer.fetch();
-            stake.executeFunction(sendOptions);
+            stake.executeFunction(sendOptions).finally(transfer.fetch());
+            
+            
 
         }
         return (
@@ -387,7 +388,7 @@ const StakeButton = () => {
                     <div id="vaultTextContainer" style={{display: "flex", flexWrap: "wrap", width: "100%", minWidth: "300px" }}>
                         <div style={{width: "45%", margin: "2.5%"}}>
                             <p style={{ color: "#323232", fontSize: "14px", textAlign: "center", fontWeight: "500" }}>
-                            INTEREST
+                            APY
                             </p>
                             <p style={{ color: "#323232", fontSize: "17px", textAlign: "center", fontWeight: "500" }}>
                             1000% +
@@ -419,6 +420,7 @@ const StakeButton = () => {
 
                 <button style={{marginTop: "0%",width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "500", color: "#181818", background: "rgb(105, 196, 166)"}} onClick={transferNFT}>Stake Token </button>
                     <input placeholder='token ID' style={{width: "140px", marginLeft: "10px", color: "#323232"}} onChange={logKey} id="stakingInputField" type="number" name="tokenID" />
+                    <p style={{ color: "#2DECB6", fontSize: "12px", textAlign: "center", minWidth: "200px" }}>**Staking takes 2 functions: safeTransferFrom & stake2</p>
                 </label>
                 <h2 style={{ color: "white", fontSize: "20px", textAlign: "left", minWidth: "300px" }}>
                         DEPOSIT WINDOW OPEN UNTIL:

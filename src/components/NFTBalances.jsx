@@ -356,46 +356,19 @@ const NFTBalances = () => {
         // --> "0x39af55979f5b690fdce14eb23f91dfb0357cb1a27f387656e197636e597b5b7c"
         if (!isAuthenticated) {
             setTimeout(function () {
-                if (isAuthenticated) {
+                if (!isAuthenticated) {
                     return;
                 }
             }, 2000)
         }
-        // Wait until the transaction is confirmed
-        const moralisAPI = useMoralis();
-        const stake = moralisAPI.Moralis.Web3;
 
 
-        function TransferNFT(tokenIdStaking) {
-
-            const transfer = useWeb3Transfer({
-                type: "erc721",
-                receiver: "0x90e3b0a1E3DDAfA5346d7e34920e9B65F79592d2", //staking contract
-                contractAddress: "0x9bFE6140Fe556e2E63E940FeB1bB8263F6d3E539",//NFT contract
-                tokenId: tokenIdStaking,
-            });
-            let alreadyRendered = false;
-
-            if (alreadyRendered) {
-                return;
-            }
-            transfer.fetch();
-            stake.executeFunction({
-                contractAddress: "0x90e3b0a1E3DDAfA5346d7e34920e9B65F79592d2",
-                functionName: "stake2",
-                abi: ABI,
-                params: {
-                    _tokenId: tokenIdStaking,
-                },
-            });
-            alreadyRendered = true;
-        }
 
 
         const Web3Api = useMoralisWeb3Api()
         console.log('DOM fully loaded and parsed');
 
-        const options = { chain: "matic", token_address: "0x5C45512C39958c73bDdcdCC1179C049D0D079b73" };
+        const options = { chain: "matic", token_address: "0x5C45512C39958c73bDdcdCC1179C049D0D079b73", address: "0x57bb76b6e4245245aB809D4cbbaf1e8E8d291373" };
         const GetNFTS = Web3Api.account.getNFTsForContract(options);
         let RDBObjectsFromOwner = [];
         const [RDBObject, setRDBObject] = useState(RDBObjectsFromOwner)
@@ -416,7 +389,6 @@ const NFTBalances = () => {
                         
                         <a className="stakingButton2" style="display: none !important; width: 100%; font-size: 14px; font-family: Roboto; font-weight: 400;"}}>
                           <button data-tokenId="`+ RDBObject[i].tokenId + `" id="stakingButton" style=" display: none !important; margin-top: 2%; width: 100%; border: none; background: linear-gradient(45deg, #2DECB6, #46A7DE); border-radius: 0.5rem; font-size: 17px; padding: 5px; font-weight: 400; color: white;"}}>*Staking Coming*</button>
-
                         </a>
                     </div>
                     </div>

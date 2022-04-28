@@ -32,70 +32,7 @@ const DMRBalance = () => {
             // console.log(RDBObject,'handle');
             let RDBHTML = `<div className="balanceContainer" style="display: flex; flex-wrap: wrap; justify-content: center; margin-top: 20px;"><p style="font-family: Roboto; color: white;">`+ balances.toLocaleString("en-US") +` DMR</p></div>`;
               document.getElementById("dmrBalance").innerHTML = RDBHTML;
-            // document.getElementById("test").innerHTML = 
-            // `
-            // <div className="cardContainer" style="display: flex; flex-wrap: wrap; justify-content: center;">
-            
-            // <div className="card" style="background: rgb(49, 50, 51); font-family: Rubik; padding: .61%; margin: 1.5%; max-width: 250px; box-shadow: 0 4px 8px 10px rgba(105, 196, 166, 0.5); transition: 0.3s; border-radius: 5px;">
-            //     <img className="cardImage" style="border-radius: 5px 5px 0 0;" src="` +RDBObject[1].image.replace('ipfs://', 'https://ipfs.io/ipfs/')+`" alt="Avatar" style="width:100%">
-            //     <div className="container">
-            //         <h4 style="font-size: 20px; font-family: Rubik; font-weight: 400; color: white; padding: 4% 2%; text-align: center;"><b>`+ RDBObject[1].name +`</b></h4>
-            //         <div className="buttonContainer" style="display: flex; flex-wrap: wrap;">
-            //             <a className="stakingButton" style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-            //                 <button style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-            //                 Info
-            //                 </button>
-            //             </a>
-            //             <a className="stakingButton" style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-            //                 <button style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-            //                 Stake Now
-            //                 </button>
-            //             </a>
-            //         </div>
-            //     </div>
-            // </div>
-
-            // <div className="card" style="background: rgb(49, 50, 51); font-family: Rubik; padding: .61%; margin: 1.5%; max-width: 250px; box-shadow: 0 4px 8px 10px rgba(105, 196, 166, 0.5); transition: 0.3s; border-radius: 5px;">
-            //     <img className="cardImage" style="border-radius: 5px 5px 0 0;" src="` +RDBObject[1].image.replace('ipfs://', 'https://ipfs.io/ipfs/')+`" alt="Avatar" style="width:100%">
-            //     <div className="container">
-            //         <h4 style="font-size: 20px; font-family: Rubik; font-weight: 400; color: white; padding: 4% 2%; text-align: center;"><b>`+ RDBObject[1].name +`</b></h4>
-            //         <div className="buttonContainer" style="display: flex; flex-wrap: wrap;">
-            //             <a className="stakingButton" style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-            //                 <button style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-            //                 Info
-            //                 </button>
-            //             </a>
-            //             <a className="stakingButton" style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-            //                 <button style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-            //                 Stake Now
-            //                 </button>
-            //             </a>
-            //         </div>
-            //     </div>
-            // </div>
-
-            // <div className="card" style="background: rgb(49, 50, 51); font-family: Rubik; padding: .61%; margin: 1.5%; max-width: 250px; box-shadow: 0 4px 8px 10px rgba(105, 196, 166, 0.5); transition: 0.3s; border-radius: 5px;">
-            //     <img className="cardImage" style="border-radius: 5px 5px 0 0;" src="` +RDBObject[1].image.replace('ipfs://', 'https://ipfs.io/ipfs/')+`" alt="Avatar" style="width:100%">
-            //     <div className="container">
-            //         <h4 style="font-size: 20px; font-family: Rubik; font-weight: 400; color: white; padding: 4% 2%; text-align: center;"><b>`+ RDBObject[1].name +`</b></h4>
-            //         <div className="buttonContainer" style="display: flex; flex-wrap: wrap;">
-            //             <a className="stakingButton" style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-            //                 <button style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-            //                 Info
-            //                 </button>
-            //             </a>
-            //             <a className="stakingButton" style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-            //                 <button style="font-size: 14px; font-family: Rubik; font-weight: 400;">
-            //                 Stake Now
-            //                 </button>
-            //             </a>
-            //         </div>
-            //     </div>
-            // </div>
-
-            // </div>
-
-            // `;
+       
         }
 
         let alreadyRendered = false;
@@ -105,11 +42,13 @@ const DMRBalance = () => {
          }
         GetBalance.then(
             value => {
-              
+              if (value.length == 0 ){
+                return;
+              }
               
               let result = value.filter(token => token.token_address == "0x955ce23f20217a6aa205620b40ede4c9e83d325f");
               balances = Math.round(result[0].balance / 1000000000000000000);
-                // for (let i = 0; i < value.result.length; i++) {
+                // for (let i = 0; i < value.result.length; i++) { ------ FOR LATER WHEN WE HAVE MULTIPLE TOKEN BALANCES
                 //     balances.push(JSON.parse(value.result[i].metadata));
 
                 //     console.log(balances, 'added1');
@@ -179,9 +118,7 @@ const DMRBalance = () => {
             });    
                 return (
                   <div>
-                    {/* <div style={{display: "flex", justifyContent: "center"}}>
-                      <button style={{marginTop: "2%",width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "500", color: "#181818", background: "rgb(105, 196, 166)"}} onClick={handleClick}>Get balance! </button>
-                    </div> */}
+                    {/* .s */}
 
                     <div>
                       <h2 style={{color: "white", marginTop: "2%", marginLeft: "12px", textAlign: "center"}}> Your DMR Balance:</h2>
