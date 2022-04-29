@@ -69,7 +69,7 @@ const Home = () => {
     // const fetchedCategories = JSON.parse(JSON.stringify(queryCategories.data, ["categoryId", "category"]));
 
     // console.log(fetchedCategories)
-
+    
     return (
         <div className="container">
 
@@ -324,7 +324,7 @@ const Home = () => {
             <div style={{
                 marginTop: "100px",
                 borderRadius: "18px",
-                background: "#18181890",
+                background: "#181818",
                 height: "450px",
                 position: "relative",
                 width: "100%",

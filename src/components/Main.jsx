@@ -171,7 +171,7 @@ Questions? Join our discord to get answers, communty support, and begin learning
                 <div style={{
                 marginTop: "100px",
                 borderRadius: "18px",
-                background: "#18181890",
+                background: "#181818",
                 height: "450px",
                 position: "relative",
                 width: "90%",
