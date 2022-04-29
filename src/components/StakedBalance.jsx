@@ -229,6 +229,7 @@ const StakedBalance = () => {
                 //     document.getElementById("test").innerHTML = HTML;
                 //     return;
                 // }
+                console.log(value, 'hi chris');
                   for (let i = 0; i < value.length; i++) {
 
                     HTML += `
