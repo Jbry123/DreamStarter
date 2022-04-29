@@ -339,8 +339,45 @@ const StakeButton = () => {
             }, 2000);
         }
         // Wait until the transaction is confirmed
-        
 
+        const handleClick3 = async () => {
+            const GetTotalStaked = stake.executeFunction({
+              chain: "matic",
+              contractAddress: "0xB0b0b94DefD5d3a4898F01A6c773d75710c2537E",
+              functionName: "SaMsStaked",
+              abi: [{
+                "inputs": [],
+                "name": "SaMsStaked",
+                "outputs": [
+                    {
+                        "internalType": "uint256",
+                        "name": "0",
+                        "type": "uint256"
+                    }
+                ],
+                "stateMutability": "view",
+                "type": "function"
+            }]
+          });
+
+          
+
+          GetTotalStaked.then(
+            value => {
+         
+                document.getElementById("StakedStats").innerText = value;
+   
+            },
+            reason => {
+              console.log(reason, 'error reason');
+          // rejection
+            })
+            .finally( () => {
+              
+            }); 
+        };
+
+        handleClick3();
 
         const transferNFT = () => {
 
@@ -418,7 +455,7 @@ const StakeButton = () => {
                         SAM LAUNCH NFTS STAKED
                 </h2>
                 <p style={{ color: "#2DECB6", fontSize: "20px", textAlign: "center", minWidth: "300px" }}>
-                    000 / 123
+                    <span id="StakedStats">006</span> / 123
                 </p>
                 </div>
                 <h2 style={{ color: "#2DECB6", fontSize: "20px", textAlign: "center", minWidth: "300px" }}>
