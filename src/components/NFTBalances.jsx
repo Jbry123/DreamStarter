@@ -442,7 +442,7 @@ const NFTBalances = () => {
         return (
 
                 <div style={{ display: "flex", justifyContent: "center", width: "200px" }}>
-                    <button style={{ marginTop: "2%", width: "250px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black", background: "rgb(105, 196, 166)" }} onClick={handleClick}>Get Stakable NFTs! </button>
+                    <button style={{ marginTop: "2%", width: "250px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "500", color: "black", background: "rgb(105, 196, 166)" }} onClick={handleClick}>Get Stakable NFTs! </button>
                 </div>
 
         )
