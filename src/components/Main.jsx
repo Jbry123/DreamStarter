@@ -4,6 +4,54 @@ import { useMoralisQuery } from "react-moralis";
 import NFTBalances from "./NFTBalances";
 import StakeButton from "./StakeButton";
 import DMRBalance from "./DMRBalance";
+const styles = {
+    headerText: {
+        margin: "30px 0px;",
+        fontSize: "40px",
+        fontFamily: "Roboto",
+        fontWeight: "500",
+        color: "#f2f2f2",
+        height: "95px",
+        width: "100%",
+        padding: "0px 30px"
+    },
+
+    headerText2: {
+        marginTop: "75px",
+        fontSize: "40px",
+        fontFamily: "Roboto",
+        fontWeight: "500",
+        color: "#f2f2f2",
+        height: "95px",
+        width: "100%",
+        padding: "0px 30px",
+        textAlign: "center"
+    },
+
+    tabs: {
+        fontSize: "38px",
+        fontFamily: "Roboto",
+        fontWeight: "500",
+        color: "#f2f2f2",
+        height: "auto",
+        width: "100%",
+        padding: "0px 30px"
+    },
+
+    pText: {
+
+        fontFamily: "Roboto",
+        fontSize: "15.5px",
+        color: "#b1b1b1",
+        height: "160px",
+        width: "100%",
+        padding: "0px 30px",
+        overflow: "overlay"
+    }
+
+
+
+};
 
 const Main = () => {
     const queryCategories = useMoralisQuery("Categories");
@@ -91,6 +139,35 @@ const Main = () => {
                     </div>
                 </div>
 
+                <div className="row glowBorder" style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: ".6%", borderRadius: "15px", border: "solid 2px #69c4a6", width: "90%", margin: "0% 5%" }}>
+                    <div className="row" style={{ display: "flex", flexWrap: "wrap", backgroundColor: "#181818", padding: "0%", borderRadius: "15px", margin: "0%" }}>
+                        <div className="column" style={{ width: "60%", padding: "0%", display: "flex", flexWrap: "wrap" }}>
+                        <iframe style={{borderRadius: "10px"}} width="100%" height="auto" src="https://www.youtube.com/embed/7DO6Vk4AesM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div className="columnHomeHeroText" style={{
+                            width: "38%", height: "52vh", padding: "0%", display: "flex", flexWrap: "wrap", borderRadius: "15px", flexDirection: "column",
+                            justifyContent: "center"
+                        }}>
+                           <h1 style={{marginTop: "10px",...styles.headerText}}>
+                                How To Use DreamStarter
+                            </h1>
+                            <p style={{marginTop: "15px", ...styles.pText}}>
+                            Watch this short tutorial on how to get started with DreamStarter!  You can also explore the DreamStarter docs. 
+                            <br />
+                            <br />
+Questions? Join our discord to get answers, communty support, and begin learning about the DreamStarter DAO                            </p>
+                            <div style={{ display: "flex", justifyContent: "center", marginTop: "2%" }}>
+                                <a href="https://dreamr.app/" style={{ marginRight: "2%" }}>
+                                    <button style={{ background: "rgb(105, 196, 166)", marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black" }}>Learn More</button>
+                                </a>
+                                <a href="https://dsc.gg/dreamr">
+                                    <button style={{ background: "rgb(105, 196, 166)", marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black" }}>Join Discord</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <div style={{
                 marginTop: "100px",
                 borderRadius: "18px",
@@ -155,6 +232,7 @@ const Main = () => {
                     </div>
 
                 </div>
+                
                 <svg width="95%" height="60" viewBox="0 0 1240 " fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="180" rx="10" fill=""></rect><rect x="7.5%" y="50%" width="90%" height="10" rx="5" fill="url(#paint0_linear_0_1)"></rect></svg>
                 <div style={{
                     display: "flex",

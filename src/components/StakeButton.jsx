@@ -7,7 +7,8 @@ const StakeButton = () => {
     const StakeButton2 = () => {
         const { authenticate, isAuthenticated, logout } = useMoralis();
         const [tokenIdStaking, setTokenIdStaking] = useState();
-
+        const moralisAPI = useMoralis();
+        const stake = moralisAPI.Moralis.Web3;
         const ABI = [
             {
                 "inputs": [
@@ -315,13 +316,13 @@ const StakeButton = () => {
 
         const transfer = useWeb3Transfer({
             type: "erc721",
-            receiver: "0x193670e378A19BB41aC134eAF7a360Ea70eDaEe5", //staking contract
+            receiver: "0xB0b0b94DefD5d3a4898F01A6c773d75710c2537E", //staking contract
             contractAddress: "0x5C45512C39958c73bDdcdCC1179C049D0D079b73",//NFT contract
             tokenId: tokenIdStaking,
         });
 
         const sendOptions = {
-            contractAddress: "0x193670e378A19BB41aC134eAF7a360Ea70eDaEe5",//staking contract
+            contractAddress: "0xB0b0b94DefD5d3a4898F01A6c773d75710c2537E",//staking contract
             functionName: "stake2",
             abi: ABI,
             params: {
@@ -334,11 +335,10 @@ const StakeButton = () => {
                 if (isAuthenticated) {
                     return;
                 }
-            }, 2000)
+            }, 2000);
         }
         // Wait until the transaction is confirmed
-        const moralisAPI = useMoralis();
-        const stake = moralisAPI.Moralis.Web3;
+        
 
 
         const transferNFT = () => {
@@ -347,7 +347,10 @@ const StakeButton = () => {
             transfer.tokenId = document.getElementById('stakingInputField').value;
             sendOptions.params._tokenId = document.getElementById('stakingInputField').value;
             console.log(transfer.tokenId, "transferStaking");
-            stake.executeFunction(sendOptions).finally(transfer.fetch());
+            stake.executeFunction(sendOptions).finally(setTimeout(function () {
+                transfer.fetch();
+            }, 25000));
+
             
             
 

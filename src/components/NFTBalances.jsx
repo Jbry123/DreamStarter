@@ -4,6 +4,8 @@ import { useState } from "react";
 import TwitterLogo from "./img/twitterCircle.png";
 import OpenSeaLogo from "./img/OpenseaCircle.png";
 import GlobeLogo from "./img/globe.png";
+import StakeButton from "./StakeButton";
+import StakedBalance from "./StakedBalance";
 
 const NFTBalances = () => {
 
@@ -368,7 +370,7 @@ const NFTBalances = () => {
         const Web3Api = useMoralisWeb3Api()
         console.log('DOM fully loaded and parsed');
 
-        const options = { chain: "matic", token_address: "0x5C45512C39958c73bDdcdCC1179C049D0D079b73", address: "0x57bb76b6e4245245aB809D4cbbaf1e8E8d291373" };
+        const options = { chain: "matic", token_address: "0xB0b0b94DefD5d3a4898F01A6c773d75710c2537E"};
         const GetNFTS = Web3Api.account.getNFTsForContract(options);
         let RDBObjectsFromOwner = [];
         const [RDBObject, setRDBObject] = useState(RDBObjectsFromOwner)
@@ -376,11 +378,15 @@ const NFTBalances = () => {
             setRDBObject(RDBObjectsFromOwner)
             console.log(RDBObject, 'handle');
             let RDBHTML = `<div className="cardContainer" style="display: flex; flex-wrap: wrap; justify-content: center;">`;
-
+            if (RDBObject.length < 1) {
+                console.log("hi");
+                RDBHTML = `<h2 style="font-size: 18px; font-family: Rubik; color: white; padding: 4% 2%; text-align: center; font-weight: 500;">NO NFTS FOUND</h2>`;
+                document.getElementById("test").innerHTML = RDBHTML;
+            }
             for (let i = 0; i < RDBObject.length; i++) {
 
                 RDBHTML += `
-                <div className="card" style="background: rgb(49, 50, 51); font-family: Rubik; padding: .61%; margin: 1.5%; max-width: 285px; border: solid 2px rgb(105, 196, 166); transition: 0.3s; border-radius: 5px;">
+                <div className="card" id="card2" style="background: rgb(49, 50, 51); font-family: Rubik; padding: .61%; margin: 1.5%; max-width: 285px; border: solid 2px rgb(105, 196, 166); transition: 0.3s; border-radius: 5px;">
                     <img className="cardImage" style="border-radius: 5px 5px 0 0;" src="` + RDBObject[i].image.replace('ipfs://', 'https://ipfs.io/ipfs/') + `" alt="Avatar" style="width:100%">
                     <div className="container">
                         <h4 style="font-size: 18px; font-family: Rubik; color: white; padding: 4% 2%; text-align: center; font-weight: 500;"><b>`+ RDBObject[i].name + `</b></h4>
@@ -395,7 +401,6 @@ const NFTBalances = () => {
                 </div>`
                 if (i == RDBObject.length) {
                     RDBHTML += `</div>`;
-                    document.getElementById("stakingButton").addEventListener("click", console.log('hi'));
                 }
                 document.getElementById("test").innerHTML = RDBHTML;
                 console.log(RDBHTML, 'added1');
@@ -435,11 +440,11 @@ const NFTBalances = () => {
         setTimeout(() => {
         }, 1000);
         return (
-            <div>
-                <div style={{ display: "flex", justifyContent: "center" }}>
-                    <button style={{ marginTop: "2%", width: "250px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black", background: "rgb(105, 196, 166)" }} onClick={handleClick}>Get Your Stakable NFTs! </button>
+
+                <div style={{ display: "flex", justifyContent: "center", width: "200px" }}>
+                    <button style={{ marginTop: "2%", width: "250px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black", background: "rgb(105, 196, 166)" }} onClick={handleClick}>Get Stakable NFTs! </button>
                 </div>
-            </div>
+
         )
     }
 
@@ -474,8 +479,12 @@ const NFTBalances = () => {
             <h2 style={{ fontSize: "32px", fontFamily: "Roboto", fontWeight: "400", color: "white", textAlign: "left" }}>Sun & Moon "LAUNCH" Vault</h2>
             <p style={{... styles.pText, padding: "0"}}>Stake your Sun & Moon NFT and earn rewards in $DMR</p>
             <div id="test"></div>
-            <RDBNFTs />
-            
+
+            <div style={{display: "flex", justifyContent: "center", margin: "20px", paddingTop: "150px"}}>
+                <RDBNFTs />
+                <StakedBalance></StakedBalance>
+            </div>
+
         </div>
     );
 };
