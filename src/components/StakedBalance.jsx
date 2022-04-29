@@ -212,7 +212,7 @@ const StakedBalance = () => {
               const handleClick2 = async () => {
                 const GetStakedNFTs = getnfts.Moralis.Web3.executeFunction({
                   chain: "matic",
-                  contractAddress: "0x5c45512c39958c73bddcdcc1179c049d0d079b73",
+                  contractAddress: "0xB0b0b94DefD5d3a4898F01A6c773d75710c2537E",
                   functionName: "get",
                   abi: [{"inputs":[{"internalType":"address","name":"user","type":"address"}],"name":"get","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}],
             params: { user: userAddress.attributes.accounts[0] }
