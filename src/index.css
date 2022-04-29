@@ -18,6 +18,25 @@ button {
   text-transform: uppercase;
 }
 
+#player {
+  border-radius: 10px;
+}
+.strobe {
+  animation: blinker 2s linear infinite;
+}
+
+@keyframes blinker {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 body,
 h1,
 h2,

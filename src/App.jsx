@@ -173,6 +173,6 @@ const App = ({ isServerInfo }) => {
   );
 };
 
-export const Logo = () => <img style={{width: "270px", height: "auto"}} src={DreamStarterlogo} />
+export const Logo = () => <a><img onClick={() => {window.location = '/';}} style={{width: "270px", height: "auto"}} src={DreamStarterlogo} /></a>
 
 export default App;

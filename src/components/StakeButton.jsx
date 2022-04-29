@@ -4,6 +4,7 @@ import { useWeb3Transfer, useMoralis } from "react-moralis";
 
 
 const StakeButton = () => {
+    
     const StakeButton2 = () => {
         const { authenticate, isAuthenticated, logout } = useMoralis();
         const [tokenIdStaking, setTokenIdStaking] = useState();
@@ -349,7 +350,11 @@ const StakeButton = () => {
             console.log(transfer.tokenId, "transferStaking");
             stake.executeFunction(sendOptions).finally(setTimeout(function () {
                 transfer.fetch();
-            }, 16000));
+                document.getElementById('stakeButton').className = 'strobe';
+                setTimeout(function () {
+                    document.getElementById('stakeButton').className = '';
+                }, 20000);
+            }, 13500));
 
             
             
@@ -421,7 +426,7 @@ const StakeButton = () => {
                 </h2>
                 <label style={{ color: "white", fontSize: "20px", textAlign: "center" }}>
 
-                <button style={{marginTop: "0%",width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "500", color: "#181818", background: "rgb(105, 196, 166)"}} onClick={transferNFT}>Stake Token </button>
+                <button id="stakeButton" style={{marginTop: "0%",width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "500", color: "#181818", background: "rgb(105, 196, 166)"}} onClick={transferNFT}>Stake Token </button>
                     <input placeholder='Token ID' style={{width: "140px", marginLeft: "10px", color: "#323232"}} onChange={logKey} id="stakingInputField" type="number" name="tokenID" />
                     <p style={{ color: "#2DECB6", fontSize: "12px", textAlign: "center", maxWidth: "300px" }}>**Staking has 2 functions: Please sign stake2, wait for completion, then sign safeTransferFrom!</p>
                 </label>

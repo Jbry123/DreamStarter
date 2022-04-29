@@ -384,7 +384,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <svg width="95%" height="60" viewBox="0 0 1240 " fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="180" rx="10" fill=""></rect><rect x="7.5%" y="50%" width="90%" height="10" rx="5" fill="url(#paint0_linear_0_1)"></rect></svg>
+                <svg id="tierBar" width="95%" height="60" viewBox="0 0 1240 " fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="180" rx="10" fill=""></rect><rect x="7.5%" y="50%" width="90%" height="10" rx="5" fill="url(#paint0_linear_0_1)"></rect></svg>
                 <div style={{
                     display: "flex",
                     justifyContent: "left",
