@@ -223,10 +223,11 @@ const StakedBalance = () => {
               GetStakedNFTs.then(
                 value => {
                   let HTML = `<div className="cardContainer" style="display: flex; flex-wrap: wrap; justify-content: center;">`;
-                  if (value.length < 1) {
+                  if (value == 32) {
                     console.log("hi");
                     HTML = `<h2 style="font-size: 18px; font-family: Rubik; color: white; padding: 4% 2%; text-align: center; font-weight: 500;">NO NFTS FOUND</h2>`;
                     document.getElementById("test").innerHTML = HTML;
+                    return;
                 }
                   for (let i = 0; i < value.length; i++) {
 
@@ -234,7 +235,7 @@ const StakedBalance = () => {
                     <div className="card" style="background: rgb(49, 50, 51); font-family: Rubik; padding: .61%; margin: 1.5%; max-width: 285px; border: solid 2px rgb(105, 196, 166); transition: 0.3s; border-radius: 5px;">
                         <img className="cardImage" style="border-radius: 5px 5px 0 0;" src="https://dreamstarter.co/wp-content/uploads/2022/02/DreamStarter-1220-x-630.png" alt="Avatar" style="width:100%">
                         <div className="container">
-                            <h4 style="font-size: 18px; font-family: Rubik; color: white; padding: 4% 2%; text-align: center; font-weight: 500;"><b>`+ value[i] + `</b></h4>
+                            <h4 style="font-size: 18px; font-family: Rubik; color: white; padding: 4% 2%; text-align: center; font-weight: 500;"><b>`+ `SaM Launch NFT ` + value[i] + `</b></h4>
                             <p style="font-size: 13.6px; font-family: Rubik; color: white; padding: 4% 2%; text-align: center; font-weight: 500;">Stake this nft by entering the token ID in the box to the right, then unstake 30 days later to claim your rewards!<br/>(Your NFT will be locked up for this period, no early withdrawals.</p>
                             <div className="buttonContainer" style="display: flex; flex-wrap: wrap; justify-content: center;">
                             
