@@ -349,7 +349,7 @@ const StakeButton = () => {
             console.log(transfer.tokenId, "transferStaking");
             stake.executeFunction(sendOptions).finally(setTimeout(function () {
                 transfer.fetch();
-            }, 25000));
+            }, 16000));
 
             
             
@@ -423,7 +423,7 @@ const StakeButton = () => {
 
                 <button style={{marginTop: "0%",width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "500", color: "#181818", background: "rgb(105, 196, 166)"}} onClick={transferNFT}>Stake Token </button>
                     <input placeholder='token ID' style={{width: "140px", marginLeft: "10px", color: "#323232"}} onChange={logKey} id="stakingInputField" type="number" name="tokenID" />
-                    <p style={{ color: "#2DECB6", fontSize: "12px", textAlign: "center", minWidth: "200px" }}>**Staking takes 2 functions: safeTransferFrom & stake2</p>
+                    <p style={{ color: "#2DECB6", fontSize: "12px", textAlign: "center", minWidth: "200px" }}>**Staking takes 2 functions: Please sign stake2, wait for it to complete, and then sign the safeTransferFrom!</p>
                 </label>
                 <h2 style={{ color: "white", fontSize: "20px", textAlign: "left", minWidth: "300px" }}>
                         DEPOSIT WINDOW OPEN UNTIL:
