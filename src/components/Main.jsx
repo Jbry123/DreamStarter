@@ -168,7 +168,7 @@ Questions? Join our discord to get answers, communty support, and begin learning
                     </div>
                 </div>
 
-                <div style={{
+                <div className="footer" style={{
                 marginTop: "100px",
                 borderRadius: "18px",
                 background: "#181818",
