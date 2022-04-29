@@ -370,7 +370,7 @@ const NFTBalances = () => {
         const Web3Api = useMoralisWeb3Api()
         console.log('DOM fully loaded and parsed');
 
-        const options = { chain: "matic", token_address: "0xB0b0b94DefD5d3a4898F01A6c773d75710c2537E"};
+        const options = { chain: "matic", token_address: "0x5C45512C39958c73bDdcdCC1179C049D0D079b73"};
         const GetNFTS = Web3Api.account.getNFTsForContract(options);
         let RDBObjectsFromOwner = [];
         const [RDBObject, setRDBObject] = useState(RDBObjectsFromOwner)
