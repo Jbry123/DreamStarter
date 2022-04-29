@@ -171,7 +171,7 @@ const Home = () => {
 
                             <a className="stakingButton" style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400" }}>
                                 <a href="/main" style={{ marginRight: "2%", display: "flex", justifyContent: "center" }}>
-                                    <button disabled style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>*Coming Soon*</button>
+                                    <button disabled style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>*COMING SOON*</button>
                                 </a>
                             </a>
                         </div>
@@ -203,7 +203,7 @@ const Home = () => {
 
                             <a className="stakingButton" style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400" }}>
                                 <a href="/main" style={{ marginRight: "2%", display: "flex", justifyContent: "center" }}>
-                                    <button disabled style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "#2DECB6", background: "transparent" }}>*COMING SOON* </button>
+                                    <button  style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "#2DECB6", background: "transparent" }}>ENTER VAULT </button>
                                 </a>
                             </a>
                         </div>
@@ -235,7 +235,7 @@ const Home = () => {
 
                             <a className="stakingButton" style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400" }}>
                                 <a href="/main" style={{ marginRight: "2%", display: "flex", justifyContent: "center" }}>
-                                    <button disabled style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>*Coming Soon* </button>
+                                    <button disabled style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>*COMING SOON* </button>
                                 </a>
                             </a>
                         </div>
@@ -267,7 +267,7 @@ const Home = () => {
 
                             <a className="stakingButton" style={{ fontSize: "14px", fontFamily: "Roboto", fontWeight: "400" }}>
                                 <a href="/main" style={{ marginRight: "2%", display: "flex", justifyContent: "center" }}>
-                                    <button disabled style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>*Coming Soon* </button>
+                                    <button disabled style={{ marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "rgb(242, 242, 242)", background: "transparent" }}>*COMING SOON* </button>
                                 </a>
                             </a>
                         </div>

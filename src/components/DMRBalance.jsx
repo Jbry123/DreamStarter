@@ -124,7 +124,7 @@ const DMRBalance = () => {
                       <h2 style={{color: "white", marginTop: "2%", marginLeft: "12px", textAlign: "center"}}> Your DMR Balance:</h2>
                     </div>
                     <div id="dmrBalance">
-                    <p id="dmrBalanceText" style={{border: "solid 3px #rgb(105, 196, 166)", borderRadius: "5px 25px 5px 20px", color: "white", marginTop: "2%", marginLeft: "12px", textAlign: "center", fontSize: "30px", fontFamily: "Roboto"}}>XX,XXX DMR</p>
+                    <p id="dmrBalanceText" style={{border: "solid 3px #rgb(105, 196, 166)", borderRadius: "5px 25px 5px 20px", color: "white", marginTop: "2%", marginLeft: "12px", textAlign: "center", fontSize: "30px", fontFamily: "Roboto"}}>0 DMR</p>
                     </div>
                   </div>
                 )
