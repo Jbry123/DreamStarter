@@ -157,11 +157,11 @@ const Main = () => {
                             <br />
 Questions? Join our discord to get answers, communty support, and begin learning about the DreamStarter DAO                            </p>
                             <div style={{ display: "flex", justifyContent: "center", marginTop: "2%" }}>
-                                <a href="https://dreamr.app/" style={{ marginRight: "2%" }}>
-                                    <button style={{ background: "rgb(105, 196, 166)", marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black" }}>Learn More</button>
+                                <a href="https://dreamr.gitbook.io/welcome-to-dreamr/technology/dreamstarter-nft-launchpad" style={{ marginRight: "2%" }}>
+                                    <button style={{ background: "rgb(105, 196, 166)", marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black" }}>VISIT DOCS</button>
                                 </a>
                                 <a href="https://dsc.gg/dreamr">
-                                    <button style={{ background: "rgb(105, 196, 166)", marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black" }}>Join Discord</button>
+                                    <button style={{ background: "rgb(105, 196, 166)", marginTop: "2%", width: "150px", borderColor: "rgb(105, 196, 166)", borderRadius: "0.5rem", fontSize: "17px", padding: "5px", fontWeight: "400", color: "black" }}>JOIN DISCORD</button>
                                 </a>
                             </div>
                         </div>

@@ -461,15 +461,15 @@ const NFTBalances = () => {
                 <img src="https://dreamstarter.co/wp-content/uploads/2022/04/DREAMR-SYMBOL-GREEN-01.png" alt="" style={{ height: "68px", width: "auto" }}></img>
                 
                 <div style={{display: "flex", width: "100%", justifyContent: "flex-end" }}>
-                    <a href="https://twitter.com/MonsterBudsNFT" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                    <a href="https://twitter.com/DreamStarterDAO" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
                         <img id="loginIcon" src={TwitterLogo} alt="" style={{width: "52px", padding: "2px", borderRadius: "100%"}}>
                         </img>
                     </a>
-                    <a href="https://monsterbuds.io/" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                    <a href="https://app.dreamstarter.co/" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
                         <img id="loginIcon" src={GlobeLogo} alt="" style={{width: "52px", padding: "2px", borderRadius: "100%"}}>
                         </img>
                     </a>
-                    <a href="https://opensea.io/collection/monsterbuds-genesis" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
+                    <a href="https://opensea.io/collection/sun-moon-launch-nft" style={{width: "52px", padding: "5px", borderRadius: "100%"}}>
                         <img id="loginIcon" src={OpenSeaLogo} alt="" style={{width: "52px", padding: "2px", borderRadius: "100%"}}>
                         </img>
                     </a>
