@@ -223,12 +223,12 @@ const StakedBalance = () => {
               GetStakedNFTs.then(
                 value => {
                   let HTML = `<div className="cardContainer" style="display: flex; flex-wrap: wrap; justify-content: center;">`;
-                  if (value == 32) {
-                    console.log("hi");
-                    HTML = `<h2 style="font-size: 18px; font-family: Rubik; color: white; padding: 4% 2%; text-align: center; font-weight: 500;">NO NFTS FOUND</h2>`;
-                    document.getElementById("test").innerHTML = HTML;
-                    return;
-                }
+                //   if (value == 32) {
+                //     console.log("hi");
+                //     HTML = `<h2 style="font-size: 18px; font-family: Rubik; color: white; padding: 4% 2%; text-align: center; font-weight: 500;">NO NFTS FOUND</h2>`;
+                //     document.getElementById("test").innerHTML = HTML;
+                //     return;
+                // }
                   for (let i = 0; i < value.length; i++) {
 
                     HTML += `
