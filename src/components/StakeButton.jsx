@@ -379,21 +379,35 @@ const StakeButton = () => {
 
         handleClick3();
 
+        const sendOptions3 = {
+            contractAddress: "0x41BB70B07d30530f02C0997BC9cd7C61bce131A8",//staking contract
+            functionName: "approveContractToMint2",
+            abi: ABI,
+            params: {
+            },
+        };
+
         const transferNFT = () => {
 
-            console.log(transfer.tokenId, "transferStaking");
-            transfer.tokenId = document.getElementById('stakingInputField').value;
-            sendOptions.params._tokenId = document.getElementById('stakingInputField').value;
-            console.log(transfer.tokenId, "transferStaking");
-            stake.executeFunction(sendOptions).finally(setTimeout(function () {
+            // console.log(transfer.tokenId, "transferStaking");
+            // transfer.tokenId = document.getElementById('stakingInputField').value;
+            // sendOptions.params._tokenId = document.getElementById('stakingInputField').value;
+            // console.log(transfer.tokenId, "transferStaking");
+            // stake.executeFunction(sendOptions).finally(setTimeout(function () {
+            //     transfer.fetch();
+            //     document.getElementById('stakeButton').className = 'strobe';
+            //     setTimeout(function () {
+            //         document.getElementById('stakeButton').className = '';
+            //     }, 20000);
+            // }, 13500));
+
+            stake.executeFunction(sendOptions3).finally(setTimeout(function () {
                 transfer.fetch();
                 document.getElementById('stakeButton').className = 'strobe';
                 setTimeout(function () {
                     document.getElementById('stakeButton').className = '';
                 }, 20000);
             }, 13500));
-
-            
             
 
         }

@@ -98,7 +98,7 @@ const App = ({ isServerInfo }) => {
     // Check if the media query is true
     if (mediaQuery.matches) {
       // Then trigger an alert
-      alert('Mobile coming soon! Please visit Dreamstarter on a laptop or desktop.')
+      window.location = "https://liquidity.dreamstarter.co"
     }
     
   useEffect(() => {

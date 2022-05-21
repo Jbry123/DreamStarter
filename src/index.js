@@ -10,6 +10,14 @@ document.head.appendChild(jQueryScript);
 var jQueryScript = document.createElement('script');  
 jQueryScript.setAttribute('src','https://unpkg.com/moralis/dist/moralis.js');
 document.head.appendChild(jQueryScript);
+
+const mediaQuery = window.matchMedia('(max-width: 768px)')
+    // Check if the media query is true
+    if (mediaQuery.matches) {
+      // Then trigger an alert
+      window.location = "https://liquidity.dreamstarter.co"
+    }
+
 /** Get your free Moralis Account https://moralis.io/ */
 
 
